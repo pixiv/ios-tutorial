@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rsf-vr-gOo">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -8,17 +9,17 @@
     </dependencies>
     <scenes>
         <!--Main View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="Cz5-Yo-nEd">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="IosTrainingTest" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                <viewController id="rsf-vr-gOo" customClass="MainViewController" customModule="Practice8" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ijr-Ih-07T">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="3NQ-VC-EhP">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="hJW-Cy-HGH">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="vVh-75-73o">
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Jh2-IE-zzv">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -26,23 +27,29 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Bpw-Lg-V4n">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                            </activityIndicatorView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <viewLayoutGuide key="safeArea" id="vjH-Yd-aa7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="3NQ-VC-EhP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="4n8-IL-56T"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3NQ-VC-EhP" secondAttribute="bottom" id="5ix-pi-dUX"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3NQ-VC-EhP" secondAttribute="trailing" id="iJH-IX-57V"/>
-                            <constraint firstItem="3NQ-VC-EhP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="inJ-HQ-7ff"/>
+                            <constraint firstItem="vjH-Yd-aa7" firstAttribute="trailing" secondItem="hJW-Cy-HGH" secondAttribute="trailing" id="73a-Fe-rYp"/>
+                            <constraint firstItem="vjH-Yd-aa7" firstAttribute="bottom" secondItem="hJW-Cy-HGH" secondAttribute="bottom" id="9cv-Qx-uJi"/>
+                            <constraint firstItem="Bpw-Lg-V4n" firstAttribute="centerX" secondItem="Ijr-Ih-07T" secondAttribute="centerX" id="DAM-0q-kN3"/>
+                            <constraint firstItem="Bpw-Lg-V4n" firstAttribute="centerY" secondItem="Ijr-Ih-07T" secondAttribute="centerY" id="bxe-EQ-EL2"/>
+                            <constraint firstItem="hJW-Cy-HGH" firstAttribute="top" secondItem="vjH-Yd-aa7" secondAttribute="top" id="hj3-E2-mW6"/>
+                            <constraint firstItem="hJW-Cy-HGH" firstAttribute="leading" secondItem="vjH-Yd-aa7" secondAttribute="leading" id="vE6-7N-1Ij"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="collectionView" destination="3NQ-VC-EhP" id="IBD-vD-tIc"/>
+                        <outlet property="collectionView" destination="hJW-Cy-HGH" id="PO0-FI-xvY"/>
+                        <outlet property="loadingView" destination="Bpw-Lg-V4n" id="atZ-XP-gJu"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v22-z9-HvJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-20" y="60"/>
+            <point key="canvasLocation" x="-278.26086956521743" y="-119.19642857142857"/>
         </scene>
     </scenes>
     <resources>

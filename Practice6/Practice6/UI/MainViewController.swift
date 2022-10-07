@@ -11,6 +11,7 @@ class MainViewController: UIViewController {
             registerCells()
         }
     }
+    @IBOutlet weak var loadingView: UIActivityIndicatorView!
 
     private var sections: [Section] = [] {
         didSet {
@@ -42,6 +43,13 @@ class MainViewController: UIViewController {
                     RankingIllustSection(illusts: illusts, parentWidth: self.view.bounds.width),
                     IllustSection(illusts: illusts, parentWidth: self.view.bounds.width)
                 ]
+            }
+            .store(in: &cancellables)
+
+        viewModel.$isRequesting
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] isRequesting in
+                self?.loadingView.isHidden = !isRequesting
             }
             .store(in: &cancellables)
 
