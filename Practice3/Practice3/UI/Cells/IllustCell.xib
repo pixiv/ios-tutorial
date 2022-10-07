@@ -15,21 +15,7 @@
             <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="jGa-QP-g7X">
                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                 <autoresizingMask key="autoresizingMask"/>
-                <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Dgh-qc-Tj2">
-                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                    </imageView>
-                </subviews>
-                <constraints>
-                    <constraint firstAttribute="trailing" secondItem="Dgh-qc-Tj2" secondAttribute="trailing" id="32n-hV-RTN"/>
-                    <constraint firstItem="Dgh-qc-Tj2" firstAttribute="leading" secondItem="jGa-QP-g7X" secondAttribute="leading" id="4Ps-XE-kBj"/>
-                    <constraint firstAttribute="bottom" secondItem="Dgh-qc-Tj2" secondAttribute="bottom" id="dli-vZ-x51"/>
-                    <constraint firstItem="Dgh-qc-Tj2" firstAttribute="top" secondItem="jGa-QP-g7X" secondAttribute="top" id="fPY-aE-fZo"/>
-                </constraints>
             </collectionViewCellContentView>
-            <connections>
-                <outlet property="imageView" destination="Dgh-qc-Tj2" id="QCC-A0-Dei"/>
-            </connections>
             <point key="canvasLocation" x="155.07246376811597" y="-139.28571428571428"/>
         </collectionViewCell>
     </objects>

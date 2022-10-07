@@ -1,6 +1,4 @@
 import Combine
-import Firebase
-import FirebaseFirestoreSwift
 import UIKit
 
 class MainViewController: UIViewController {
@@ -27,23 +25,13 @@ class MainViewController: UIViewController {
         }
     }
 
-    private let repository: IllustRepository = IllustRepositoryImpl()
-    private var illusts: [Illust] = []
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        Task {
-            do {
-                (illusts, _) = try await repository.fetchIllusts()
-                sections = [
-                    RankingIllustSection(illusts: illusts, parentWidth: self.view.bounds.width),
-                    IllustSection(illusts: illusts, parentWidth: self.view.bounds.width)
-                ]
-            } catch {
-                print(error)
-            }
-        }
+        sections = [
+            RankingIllustSection(parentWidth: self.view.bounds.width),
+            IllustSection(parentWidth: self.view.bounds.width)
+        ]
     }
 }
 

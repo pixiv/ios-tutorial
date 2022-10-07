@@ -1,11 +1,10 @@
 import UIKit
 
 struct IllustSection: Section {
-    let illusts: [Illust]
     let parentWidth: CGFloat
 
     var numberOfItems: Int {
-        return illusts.count
+        return 8
     }
 
     func layoutSection() -> NSCollectionLayoutSection {
@@ -36,7 +35,6 @@ struct IllustSection: Section {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "IllustCell", for: indexPath) as? IllustCell else {
             return UICollectionViewCell()
         }
-        cell.bind(illusts[indexPath.item])
         return cell
     }
 }
