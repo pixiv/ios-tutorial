@@ -44,21 +44,4 @@ class IllustViewModel {
         }
         isRequesting = false
     }
-
-    func favorite(illust: Illust) async {
-        do {
-            guard let newIllust = try await repository.favorite(illust: illust) else {
-                return
-            }
-
-            illusts = illusts.map {
-                if $0.id == newIllust.id {
-                    return newIllust
-                }
-                return $0
-            }
-        } catch {
-            print(error)
-        }
-    }
 }

@@ -40,11 +40,7 @@ class MainViewController: UIViewController {
                 }
                 self.sections = [
                     RankingIllustSection(illusts: illusts, parentWidth: self.view.bounds.width),
-                    IllustSection(illusts: illusts, parentWidth: self.view.bounds.width, heartTapped: { illust in
-                        Task {
-                            await self.viewModel.favorite(illust: illust)
-                        }
-                    })
+                    IllustSection(illusts: illusts, parentWidth: self.view.bounds.width)
                 ]
             }
             .store(in: &cancellables)

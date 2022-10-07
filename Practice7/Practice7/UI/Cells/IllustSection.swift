@@ -3,7 +3,6 @@ import UIKit
 struct IllustSection: Section {
     let illusts: [Illust]
     let parentWidth: CGFloat
-    let heartTapped: (Illust) -> Void
 
     var numberOfItems: Int {
         return illusts.count
@@ -37,7 +36,7 @@ struct IllustSection: Section {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "IllustCell", for: indexPath) as? IllustCell else {
             return UICollectionViewCell()
         }
-        cell.bind(illusts[indexPath.item], heartTapped: heartTapped)
+        cell.bind(illusts[indexPath.item])
         return cell
     }
 }

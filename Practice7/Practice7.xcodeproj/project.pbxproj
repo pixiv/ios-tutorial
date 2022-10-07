@@ -116,16 +116,16 @@
 		244ABEAF28F014B000BD1F3F /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				244ABEB828F014B000BD1F3F /* HeaderCell.swift */,
 				244ABEB028F014B000BD1F3F /* HeaderCell.xib */,
-				244ABEB128F014B000BD1F3F /* RankingIllustCell.swift */,
-				244ABEB228F014B000BD1F3F /* IllustSection.swift */,
+				244ABEB928F014B000BD1F3F /* HeaderSection.swift */,
 				244ABEB328F014B000BD1F3F /* IllustCell.swift */,
+				244ABEB728F014B000BD1F3F /* IllustCell.xib */,
+				244ABEB228F014B000BD1F3F /* IllustSection.swift */,
+				244ABEB128F014B000BD1F3F /* RankingIllustCell.swift */,
 				244ABEB428F014B000BD1F3F /* RankingIllustCell.xib */,
 				244ABEB528F014B000BD1F3F /* RnakingIllustSection.swift */,
 				244ABEB628F014B000BD1F3F /* Section.swift */,
-				244ABEB728F014B000BD1F3F /* IllustCell.xib */,
-				244ABEB828F014B000BD1F3F /* HeaderCell.swift */,
-				244ABEB928F014B000BD1F3F /* HeaderSection.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
