@@ -27,27 +27,22 @@ class MainViewController: UIViewController {
         }
     }
 
-    private let viewModel = IllustViewModel(repository: IllustRepositoryImpl())
-    private var cancellables = Set<AnyCancellable>()
+    private let repository: IllustRepository = IllustRepositoryImpl()
+    private var illusts: [Illust] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        viewModel.$illusts
-            .receive(on: DispatchQueue.main)
-            .sink { [weak self] illusts in
-                guard let self = self else {
-                    return
-                }
-                self.sections = [
+        Task {
+            do {
+                (illusts, _) = try await repository.fetchIllusts()
+                sections = [
                     RankingIllustSection(illusts: illusts, parentWidth: self.view.bounds.width),
                     IllustSection(illusts: illusts, parentWidth: self.view.bounds.width)
                 ]
+            } catch {
+                print(error)
             }
-            .store(in: &cancellables)
-
-        Task {
-            await viewModel.fetchIllusts()
         }
     }
 }

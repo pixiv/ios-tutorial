@@ -18,7 +18,6 @@
 		244ABEA328F0128800BD1F3F /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 244ABEA228F0128800BD1F3F /* FirebaseFirestoreCombine-Community */; };
 		244ABEA528F0128800BD1F3F /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 244ABEA428F0128800BD1F3F /* FirebaseFirestoreSwift */; };
 		244ABEA828F012AD00BD1F3F /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = 244ABEA728F012AD00BD1F3F /* Nuke */; };
-		244ABEBA28F014B000BD1F3F /* IllustViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244ABEA928F014B000BD1F3F /* IllustViewModel.swift */; };
 		244ABEBB28F014B000BD1F3F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244ABEAA28F014B000BD1F3F /* MainViewController.swift */; };
 		244ABEBC28F014B000BD1F3F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 244ABEAB28F014B000BD1F3F /* GoogleService-Info.plist */; };
 		244ABEBD28F014B000BD1F3F /* Illust.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244ABEAD28F014B000BD1F3F /* Illust.swift */; };
@@ -43,7 +42,6 @@
 		244ABE9028F0119600BD1F3F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		244ABE9328F0119600BD1F3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		244ABE9528F0119600BD1F3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		244ABEA928F014B000BD1F3F /* IllustViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IllustViewModel.swift; sourceTree = "<group>"; };
 		244ABEAA28F014B000BD1F3F /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		244ABEAB28F014B000BD1F3F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		244ABEAD28F014B000BD1F3F /* Illust.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Illust.swift; sourceTree = "<group>"; };
@@ -144,7 +142,6 @@
 		244ABECA28F0158D00BD1F3F /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				244ABEA928F014B000BD1F3F /* IllustViewModel.swift */,
 				244ABE8D28F0119500BD1F3F /* Main.storyboard */,
 				244ABEAA28F014B000BD1F3F /* MainViewController.swift */,
 				244ABEAF28F014B000BD1F3F /* Cells */,
@@ -254,7 +251,6 @@
 				244ABEC028F014B000BD1F3F /* RankingIllustCell.swift in Sources */,
 				244ABEC828F014B000BD1F3F /* HeaderSection.swift in Sources */,
 				244ABEC728F014B000BD1F3F /* HeaderCell.swift in Sources */,
-				244ABEBA28F014B000BD1F3F /* IllustViewModel.swift in Sources */,
 				244ABE8828F0119500BD1F3F /* AppDelegate.swift in Sources */,
 				244ABE8A28F0119500BD1F3F /* SceneDelegate.swift in Sources */,
 				244ABEBB28F014B000BD1F3F /* MainViewController.swift in Sources */,
