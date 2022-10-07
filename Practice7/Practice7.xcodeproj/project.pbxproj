@@ -36,7 +36,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		244ABE8428F0119500BD1F3F /* Practice8.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Practice8.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		244ABE8428F0119500BD1F3F /* Practice7.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Practice7.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		244ABE8728F0119500BD1F3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		244ABE8928F0119500BD1F3F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		244ABE8E28F0119500BD1F3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -80,7 +80,7 @@
 		244ABE7B28F0119500BD1F3F = {
 			isa = PBXGroup;
 			children = (
-				244ABE8628F0119500BD1F3F /* Practice8 */,
+				244ABE8628F0119500BD1F3F /* Practice7 */,
 				244ABE8528F0119500BD1F3F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -88,12 +88,12 @@
 		244ABE8528F0119500BD1F3F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				244ABE8428F0119500BD1F3F /* Practice8.app */,
+				244ABE8428F0119500BD1F3F /* Practice7.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		244ABE8628F0119500BD1F3F /* Practice8 */ = {
+		244ABE8628F0119500BD1F3F /* Practice7 */ = {
 			isa = PBXGroup;
 			children = (
 				244ABECB28F015C900BD1F3F /* Data */,
@@ -102,7 +102,7 @@
 				244ABE8728F0119500BD1F3F /* AppDelegate.swift */,
 				244ABE8928F0119500BD1F3F /* SceneDelegate.swift */,
 			);
-			path = Practice8;
+			path = Practice7;
 			sourceTree = "<group>";
 		};
 		244ABEAC28F014B000BD1F3F /* Models */ = {
@@ -164,9 +164,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		244ABE8328F0119500BD1F3F /* Practice8 */ = {
+		244ABE8328F0119500BD1F3F /* Practice7 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 244ABE9828F0119600BD1F3F /* Build configuration list for PBXNativeTarget "Practice8" */;
+			buildConfigurationList = 244ABE9828F0119600BD1F3F /* Build configuration list for PBXNativeTarget "Practice7" */;
 			buildPhases = (
 				244ABE8028F0119500BD1F3F /* Sources */,
 				244ABE8128F0119500BD1F3F /* Frameworks */,
@@ -176,7 +176,7 @@
 			);
 			dependencies = (
 			);
-			name = Practice8;
+			name = Practice7;
 			packageProductDependencies = (
 				244ABE9C28F0128800BD1F3F /* FirebaseAuth */,
 				244ABE9E28F0128800BD1F3F /* FirebaseAuthCombine-Community */,
@@ -185,8 +185,8 @@
 				244ABEA428F0128800BD1F3F /* FirebaseFirestoreSwift */,
 				244ABEA728F012AD00BD1F3F /* Nuke */,
 			);
-			productName = Practice8;
-			productReference = 244ABE8428F0119500BD1F3F /* Practice8.app */;
+			productName = Practice7;
+			productReference = 244ABE8428F0119500BD1F3F /* Practice7.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -204,7 +204,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 244ABE7F28F0119500BD1F3F /* Build configuration list for PBXProject "Practice8" */;
+			buildConfigurationList = 244ABE7F28F0119500BD1F3F /* Build configuration list for PBXProject "Practice7" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -221,7 +221,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				244ABE8328F0119500BD1F3F /* Practice8 */,
+				244ABE8328F0119500BD1F3F /* Practice7 */,
 			);
 		};
 /* End PBXProject section */
@@ -408,7 +408,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Practice8/Resources/Info.plist;
+				INFOPLIST_FILE = Practice7/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -419,7 +419,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = net.pixiv.training.Practice8;
+				PRODUCT_BUNDLE_IDENTIFIER = net.pixiv.training.Practice7;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -435,7 +435,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Practice8/Resources/Info.plist;
+				INFOPLIST_FILE = Practice7/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -446,7 +446,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = net.pixiv.training.Practice8;
+				PRODUCT_BUNDLE_IDENTIFIER = net.pixiv.training.Practice7;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -457,7 +457,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		244ABE7F28F0119500BD1F3F /* Build configuration list for PBXProject "Practice8" */ = {
+		244ABE7F28F0119500BD1F3F /* Build configuration list for PBXProject "Practice7" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				244ABE9628F0119600BD1F3F /* Debug */,
@@ -466,7 +466,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		244ABE9828F0119600BD1F3F /* Build configuration list for PBXNativeTarget "Practice8" */ = {
+		244ABE9828F0119600BD1F3F /* Build configuration list for PBXNativeTarget "Practice7" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				244ABE9928F0119600BD1F3F /* Debug */,
