@@ -59,17 +59,6 @@ class MainViewController: UIViewController {
     }
 }
 
-extension MainViewController: UIScrollViewDelegate {
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        guard scrollView.contentOffset.y >= scrollView.contentSize.height - scrollView.frame.size.height else {
-            return
-        }
-        Task {
-            await viewModel.fetchNextIllusts()
-        }
-    }
-}
-
 extension MainViewController {
     private func registerCells() {
         collectionView.register(UINib(nibName: "HeaderCell", bundle: nil), forSupplementaryViewOfKind: "RecommendedHeader", withReuseIdentifier: "HeaderCell")
