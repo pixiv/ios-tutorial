@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Practice2/Practice2.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Practice3/Practice3.xcodeproj">
    </FileRef>
    <FileRef
