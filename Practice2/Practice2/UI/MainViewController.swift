@@ -37,8 +37,6 @@ class MainViewController: UIViewController {
 
 extension MainViewController {
     private func registerCells() {
-        collectionView.register(UINib(nibName: "HeaderCell", bundle: nil), forSupplementaryViewOfKind: "RecommendedHeader", withReuseIdentifier: "HeaderCell")
-        collectionView.register(UINib(nibName: "HeaderCell", bundle: nil), forSupplementaryViewOfKind: "RankingHeader", withReuseIdentifier: "HeaderCell")
         collectionView.register(UINib(nibName: "IllustCell", bundle: nil),  forCellWithReuseIdentifier: "IllustCell")
         collectionView.register(UINib(nibName: "RankingIllustCell", bundle: nil),  forCellWithReuseIdentifier: "RankingIllustCell")
     }
@@ -58,21 +56,5 @@ extension MainViewController: UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         return sections[indexPath.section].configureCell(collectionView: collectionView, indexPath: indexPath)
-    }
-
-    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        guard let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "HeaderCell", for: indexPath) as? HeaderCell else {
-            return UICollectionReusableView()
-        }
-        switch kind {
-        case "RecommendedHeader":
-            header.bind("Recommended")
-            return header
-        case "RankingHeader":
-            header.bind("Ranking")
-            return header
-        default:
-             return UICollectionReusableView()
-         }
     }
 }

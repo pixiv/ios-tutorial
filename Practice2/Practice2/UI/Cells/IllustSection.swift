@@ -21,13 +21,6 @@ struct IllustSection: Section {
 
         let section = NSCollectionLayoutSection(group: group)
         section.interGroupSpacing = spacing
-
-        let sectionHeader = NSCollectionLayoutBoundarySupplementaryItem(
-            layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .absolute(32)),
-            elementKind: "RecommendedHeader",
-            alignment: .top
-        )
-        section.boundarySupplementaryItems = [sectionHeader]
         return section
     }
 

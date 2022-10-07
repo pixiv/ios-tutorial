@@ -20,13 +20,6 @@ struct RankingIllustSection: Section {
         section.orthogonalScrollingBehavior = .continuous
         section.contentInsets = .init(top: 0, leading: 8, bottom: 8, trailing: 0)
         section.interGroupSpacing = spacing
-
-        let sectionHeader = NSCollectionLayoutBoundarySupplementaryItem(
-            layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .absolute(32)),
-            elementKind: "RankingHeader",
-            alignment: .top
-        )
-        section.boundarySupplementaryItems = [sectionHeader]
         return section
     }
 

@@ -22,7 +22,6 @@
 		244ABEC528F014B000BD1F3F /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244ABEB628F014B000BD1F3F /* Section.swift */; };
 		244ABEC628F014B000BD1F3F /* IllustCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 244ABEB728F014B000BD1F3F /* IllustCell.xib */; };
 		244ABEC728F014B000BD1F3F /* HeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244ABEB828F014B000BD1F3F /* HeaderCell.swift */; };
-		244ABEC828F014B000BD1F3F /* HeaderSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244ABEB928F014B000BD1F3F /* HeaderSection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,7 +42,6 @@
 		244ABEB628F014B000BD1F3F /* Section.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
 		244ABEB728F014B000BD1F3F /* IllustCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IllustCell.xib; sourceTree = "<group>"; };
 		244ABEB828F014B000BD1F3F /* HeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderCell.swift; sourceTree = "<group>"; };
-		244ABEB928F014B000BD1F3F /* HeaderSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderSection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,7 +87,6 @@
 			children = (
 				244ABEB828F014B000BD1F3F /* HeaderCell.swift */,
 				244ABEB028F014B000BD1F3F /* HeaderCell.xib */,
-				244ABEB928F014B000BD1F3F /* HeaderSection.swift */,
 				244ABEB328F014B000BD1F3F /* IllustCell.swift */,
 				244ABEB728F014B000BD1F3F /* IllustCell.xib */,
 				244ABEB228F014B000BD1F3F /* IllustSection.swift */,
@@ -202,7 +199,6 @@
 				244ABEC128F014B000BD1F3F /* IllustSection.swift in Sources */,
 				244ABEC428F014B000BD1F3F /* RnakingIllustSection.swift in Sources */,
 				244ABEC028F014B000BD1F3F /* RankingIllustCell.swift in Sources */,
-				244ABEC828F014B000BD1F3F /* HeaderSection.swift in Sources */,
 				244ABEC728F014B000BD1F3F /* HeaderCell.swift in Sources */,
 				244ABE8828F0119500BD1F3F /* AppDelegate.swift in Sources */,
 				244ABE8A28F0119500BD1F3F /* SceneDelegate.swift in Sources */,
