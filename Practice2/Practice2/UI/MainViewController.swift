@@ -9,7 +9,6 @@ class MainViewController: UIViewController {
             registerCells()
         }
     }
-    @IBOutlet weak var loadingView: UIActivityIndicatorView!
 
     private var sections: [Section] = [] {
         didSet {

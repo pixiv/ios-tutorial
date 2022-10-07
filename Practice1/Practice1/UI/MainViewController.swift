@@ -9,7 +9,6 @@ class MainViewController: UIViewController {
             registerCells()
         }
     }
-    @IBOutlet weak var loadingView: UIActivityIndicatorView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
