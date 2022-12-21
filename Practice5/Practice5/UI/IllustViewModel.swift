@@ -1,6 +1,7 @@
 import Firebase
 
-class IllustViewModel {
+@MainActor
+final class IllustViewModel {
     @Published var illusts: [Illust] = []
 
     private let repository: IllustRepository

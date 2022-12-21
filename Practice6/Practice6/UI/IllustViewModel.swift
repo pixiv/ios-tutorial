@@ -1,6 +1,7 @@
 import Firebase
 
-class IllustViewModel {
+@MainActor
+final class IllustViewModel {
     @Published var illusts: [Illust] = []
     @Published var isRequesting: Bool = false
 
