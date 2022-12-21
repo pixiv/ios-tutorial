@@ -35,7 +35,7 @@ struct IllustSection: Section {
 
     func configureCell(collectionView: UICollectionView, indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "IllustCell", for: indexPath) as? IllustCell else {
-            return UICollectionViewCell()
+            fatalError()
         }
         cell.bind(illusts[indexPath.item], heartTapped: heartTapped)
         return cell

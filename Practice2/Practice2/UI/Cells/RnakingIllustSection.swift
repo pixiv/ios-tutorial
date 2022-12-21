@@ -25,7 +25,7 @@ struct RankingIllustSection: Section {
 
     func configureCell(collectionView: UICollectionView, indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RankingIllustCell", for: indexPath) as? RankingIllustCell else {
-            return UICollectionViewCell()
+            fatalError()
         }
         return cell
     }

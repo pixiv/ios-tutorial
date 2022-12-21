@@ -101,7 +101,7 @@ extension MainViewController: UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         guard let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "HeaderCell", for: indexPath) as? HeaderCell else {
-            return UICollectionReusableView()
+            fatalError()
         }
         switch kind {
         case "RecommendedHeader":
@@ -111,7 +111,7 @@ extension MainViewController: UICollectionViewDataSource {
             header.bind("Ranking")
             return header
         default:
-             return UICollectionReusableView()
+            fatalError()
          }
     }
 }
