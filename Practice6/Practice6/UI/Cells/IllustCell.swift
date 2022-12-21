@@ -2,7 +2,7 @@ import Nuke
 import UIKit
 
 class IllustCell: UICollectionViewCell {
-    @IBOutlet weak var imageView: UIImageView! {
+    @IBOutlet private weak var imageView: UIImageView! {
         didSet {
             imageView.contentMode = .scaleAspectFill
         }

@@ -2,7 +2,7 @@ import Nuke
 import UIKit
 
 class HeaderCell: UICollectionReusableView {
-    @IBOutlet weak var label: UILabel!
+    @IBOutlet private weak var label: UILabel!
 
     func bind(_ title: String) {
         label.text = title

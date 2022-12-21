@@ -2,8 +2,8 @@ import Nuke
 import UIKit
 
 class IllustCell: UICollectionViewCell {
-    @IBOutlet weak var button: UIButton!
-    @IBOutlet weak var imageView: UIImageView! {
+    @IBOutlet private weak var button: UIButton!
+    @IBOutlet private weak var imageView: UIImageView! {
         didSet {
             imageView.contentMode = .scaleAspectFill
         }
@@ -21,7 +21,7 @@ class IllustCell: UICollectionViewCell {
         self.heartTapped = heartTapped
     }
 
-    @IBAction func handleHeartButtonTapped(_ sender: UIButton) {
+    @IBAction private func handleHeartButtonTapped(_ sender: UIButton) {
         guard let illust = illust else {
             return
         }

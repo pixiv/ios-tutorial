@@ -4,14 +4,14 @@ import FirebaseFirestoreSwift
 import UIKit
 
 class MainViewController: UIViewController {
-    @IBOutlet weak var collectionView: UICollectionView! {
+    @IBOutlet private weak var collectionView: UICollectionView! {
         didSet {
             collectionView.delegate = self
             collectionView.dataSource = self
             registerCells()
         }
     }
-    @IBOutlet weak var loadingView: UIActivityIndicatorView!
+    @IBOutlet private weak var loadingView: UIActivityIndicatorView!
 
     private var sections: [Section] = [] {
         didSet {
