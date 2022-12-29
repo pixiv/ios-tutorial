@@ -3,7 +3,6 @@ import UIKit
 class MainViewController: UIViewController {
     @IBOutlet private weak var collectionView: UICollectionView! {
         didSet {
-            collectionView.delegate = self
             collectionView.dataSource = self
             registerCells()
         }
@@ -38,9 +37,6 @@ extension MainViewController {
     private func registerCells() {
         collectionView.register(UINib(nibName: "IllustCell", bundle: nil),  forCellWithReuseIdentifier: "IllustCell")
     }
-}
-
-extension MainViewController: UICollectionViewDelegate {
 }
 
 extension MainViewController: UICollectionViewDataSource {

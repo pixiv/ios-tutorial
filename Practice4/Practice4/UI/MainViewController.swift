@@ -5,7 +5,6 @@ import UIKit
 class MainViewController: UIViewController {
     @IBOutlet private weak var collectionView: UICollectionView! {
         didSet {
-            collectionView.delegate = self
             collectionView.dataSource = self
             registerCells()
         }
@@ -52,9 +51,6 @@ extension MainViewController {
         collectionView.register(UINib(nibName: "IllustCell", bundle: nil),  forCellWithReuseIdentifier: "IllustCell")
         collectionView.register(UINib(nibName: "RankingIllustCell", bundle: nil),  forCellWithReuseIdentifier: "RankingIllustCell")
     }
-}
-
-extension MainViewController: UICollectionViewDelegate {
 }
 
 extension MainViewController: UICollectionViewDataSource {

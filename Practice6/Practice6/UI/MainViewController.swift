@@ -6,11 +6,11 @@ import UIKit
 class MainViewController: UIViewController {
     @IBOutlet private weak var collectionView: UICollectionView! {
         didSet {
-            collectionView.delegate = self
             collectionView.dataSource = self
             registerCells()
         }
     }
+    @IBOutlet private weak var loadingView: UIActivityIndicatorView!
 
     private var sections: [Section] = [] {
         didSet {
@@ -65,9 +65,6 @@ extension MainViewController {
         collectionView.register(UINib(nibName: "IllustCell", bundle: nil),  forCellWithReuseIdentifier: "IllustCell")
         collectionView.register(UINib(nibName: "RankingIllustCell", bundle: nil),  forCellWithReuseIdentifier: "RankingIllustCell")
     }
-}
-
-extension MainViewController: UICollectionViewDelegate {
 }
 
 extension MainViewController: UICollectionViewDataSource {
