@@ -16,7 +16,7 @@ class MainViewController: UIViewController {
                 let columns: CGFloat = 2
 
                 let spacing: CGFloat = 8
-                let size: CGFloat = (self.view.bounds.width - (8 * (columns - 1))) / columns
+                let size: CGFloat = (self.view.bounds.width - (spacing * (columns - 1))) / columns
                 let itemSize = NSCollectionLayoutSize(widthDimension: .absolute(size), heightDimension: .fractionalHeight(1))
                 let item = NSCollectionLayoutItem(layoutSize: itemSize)
 
