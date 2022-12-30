@@ -25,14 +25,6 @@ class MainViewController: UIViewController {
 
                 let section = NSCollectionLayoutSection(group: group)
                 section.interGroupSpacing = spacing
-
-                let sectionHeader = NSCollectionLayoutBoundarySupplementaryItem(
-                    layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .absolute(32)),
-                    elementKind: "RecommendedHeader",
-                    alignment: .top
-                )
-                section.boundarySupplementaryItems = [sectionHeader]
-
                 return section
             }
             return layout
@@ -61,18 +53,5 @@ extension MainViewController: UICollectionViewDataSource {
             fatalError()
         }
         return cell
-    }
-
-    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        guard let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "HeaderCell", for: indexPath) as? HeaderCell else {
-            fatalError()
-        }
-        switch kind {
-        case "RecommendedHeader":
-            header.bind("Recommended")
-            return header
-        default:
-            fatalError()
-         }
     }
 }

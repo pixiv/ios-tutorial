@@ -16,15 +16,17 @@
             }
             
             @Step {
-                CollectionViewを配置し、この後配置していくCellの登録とDataSourceを設定していきます。DataSourceはわかりやすいように適当にSectionの数は1つ、アイテムの数は8個としておきましょう
+                この後イラストを配置していくIllustCellも作ります。まだ画像はないので、一旦赤い背景が表示されるようにします
                 
-                @Code(name: "MainViewController.swift", file: Practice1_Section1_MainViewController_2.swift)
+                @Code(name: "IllustCell.swift", file: Practice1_Section1_IllustCell_1.swift)
             }
             
             @Step {
-                この後イラストを配置していくIllustCellも作ります。まだ画像はないので、一旦赤い背景にしておきましょう
+                CollectionViewを配置し、IllustCellの登録をします。Cellの種類はこのあと増えていくと考えられるため、registerCellsというメソッドを生やしています
                 
-                @Code(name: "IllustCell.swift", file: Practice1_Section1_IllustCell_1.swift)
+                DataSourceも設定していきます。DataSourceはわかりやすいように適当にSectionの数は1つ、アイテムの数は8個としておきましょう
+                
+                @Code(name: "MainViewController.swift", file: Practice1_Section1_MainViewController_2.swift, previousFile: Practice1_Section1_MainViewController_1.swift)
             }
             
             @Step {

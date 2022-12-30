@@ -1,63 +1,36 @@
 @Tutorial(time: 50) {
-    @Intro(title: "課題2: イラストを2列で表示する仕組みを作ってみよう") {
-        イラストを2列で表示する仕組みを作っていきましょう。実際に画像を表示するのはこの先のSectionで扱うので、一旦2列表示の仕組みが作れればOKです
+    @Intro(title: "課題2: おすすめのヘッダーを作ってみよう") {
+        
     }
     
     @Section(title: "課題2") {
         @ContentAndMedia {
-            aaaaa
+            ヘッダーを作る方法もいくつかありますが、Practice1で使用したCompositionalLayoutではSectionに対してSupplementaryViewと呼ばれる付加的なViewをつけることができます
         }
             
         @Steps {
             @Step {
-                新しいViewControllerを作っていきましょう。名前は適当にMainViewControllerとしています
+                ヘッダー用のセルを作成します。SupplementaryViewに設定するViewはUICollectionReusableViewにする必要があるため、こちらを継承します。独自にbindメソッドを作り、外からラベルのテキストを設定できるようにしておきます
                 
-                @Code(name: "MainViewController.swift", file: Practice1_Section1_MainViewController_1.swift)
+                @Code(name: "HeaderCell.swift", file: Practice2_Section1_HeaderCell_1.swift)
             }
             
             @Step {
-                CollectionViewを配置し、この後配置していくCellの登録とDataSourceを設定していきます。DataSourceはわかりやすいように適当にSectionの数は1つ、アイテムの数は8個としておきましょう
+                作ったHeaderCellをCollectionViewに登録しておきます
                 
-                @Code(name: "MainViewController.swift", file: Practice1_Section1_MainViewController_2.swift)
+                @Code(name: "MainViewController.swift", file: Practice2_Section1_MainViewController_1.swift, previousFile: Practice1_Section1_MainViewController_7.swift)
             }
             
             @Step {
-                この後イラストを配置していくIllustCellも作ります。まだ画像はないので、一旦赤い背景にしておきましょう
+                Sectionに対してSupplementaryViewを設定します。elementKindにはRecommendedHeaderという名前をつけておきます
                 
-                @Code(name: "IllustCell.swift", file: Practice1_Section1_IllustCell_1.swift)
+                @Code(name: "MainViewController.swift", file: Practice2_Section1_MainViewController_2.swift)
             }
             
             @Step {
-                2列表示を作るにはいくつか方法がありますが、今回は新しめのAPIであるCompositionalLayoutを使っていきます。難しそうな気がしますが、ちゃんと理解して使うことができればApp Storeのような複雑なレイアウトも組むことができます。
+                あとはCollectionViewがこのDelegateメソッドを呼んでくれる際に、設定したelementKindと同じものであれば、HeaderCellにRecommendedとタイトルを設定して返すようにします
                 
-                違う方法で2列表示を作ることもできますが、今回のアプリの完成形を考えると、ランキングのUIに横スクロールが使われているのでCompositionalLayoutを使うのが適切と判断することができます
-                
-                @Code(name: "MainViewController.swift", file: Practice1_Section1_MainViewController_3.swift, previousFile: Practice1_Section1_MainViewController_2.swift)
-            }
-            
-            @Step {
-                CompositionalLayoutには、Section、Group、Itemという概念があり、それぞれのレイアウト方法を記述することで様々なレイアウトが組めるようになっています。
-                詳しくは [ドキュメント](https://developer.apple.com/documentation/uikit/uicollectionviewcompositionallayout) を見ると良いでしょう
-                
-                @Code(name: "MainViewController.swift", file: Practice1_Section1_MainViewController_4.swift)
-            }
-            
-            @Step {
-                今回は2列表示にしたいので、それぞれのセルが画面幅の1/2になっていれば良いです。画面幅の1/2を計算して、Itemのwidthと、ItemをまとめるGroupのheightに設定してあげます。 `.absolute` を使うことで固定値を設定できます。
-                
-                @Code(name: "MainViewController.swift", file: Practice1_Section1_MainViewController_5.swift)
-            }
-            
-            @Step {
-                残りはいい感じに埋めてくれる `.fractionalWidth(1)` と `.fractionalHeight(1)` を入れておきます
-                
-                @Code(name: "MainViewController.swift", file: Practice1_Section1_MainViewController_6.swift)
-            }
-            
-            @Step {
-                2列表示はできたのですが、セルの間に余白がないとわかりづらいので設定します
-                
-                @Code(name: "MainViewController.swift", file: Practice1_Section1_MainViewController_7.swift)
+                @Code(name: "MainViewController.swift", file: Practice2_Section1_MainViewController_3.swift)
             }
         }
     }

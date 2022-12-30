@@ -62,17 +62,4 @@ extension MainViewController: UICollectionViewDataSource {
         }
         return cell
     }
-
-    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        guard let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "HeaderCell", for: indexPath) as? HeaderCell else {
-            fatalError()
-        }
-        switch kind {
-        case "RecommendedHeader":
-            header.bind("Recommended")
-            return header
-        default:
-            fatalError()
-         }
-    }
 }

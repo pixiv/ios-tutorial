@@ -12,4 +12,10 @@
         
         @TutorialReference(tutorial: "doc:Practice1")
     }
+
+    @Chapter(name: "課題2: おすすめのヘッダーを作ってみよう") {
+        作ってみましょう
+        
+        @TutorialReference(tutorial: "doc:Practice2")
+    }
 }

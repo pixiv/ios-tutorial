@@ -9,10 +9,9 @@ struct IllustSection: Section {
     }
 
     func layoutSection() -> NSCollectionLayoutSection {
-        let columns: CGFloat = 2
-
         let spacing: CGFloat = 8
-        let size: CGFloat = (parentWidth - (spacing * (columns - 1))) / columns
+        let size: CGFloat = (parentWidth - spacing) / 2
+
         let itemSize = NSCollectionLayoutSize(widthDimension: .absolute(size), heightDimension: .fractionalHeight(1))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
 

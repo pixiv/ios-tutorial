@@ -13,10 +13,9 @@ class MainViewController: UIViewController {
 
         collectionView.collectionViewLayout = {
             let layout = UICollectionViewCompositionalLayout { (sectionIndex, environment) -> NSCollectionLayoutSection? in
-                let columns: CGFloat = 2
-
                 let spacing: CGFloat = 8
-                let size: CGFloat = (self.view.bounds.width - (spacing * (columns - 1))) / columns
+                let size: CGFloat = (self.view.bounds.width - spacing) / 2
+
                 let itemSize = NSCollectionLayoutSize(widthDimension: .absolute(size), heightDimension: .fractionalHeight(1))
                 let item = NSCollectionLayoutItem(layoutSize: itemSize)
 
