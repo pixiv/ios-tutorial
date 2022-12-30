@@ -38,7 +38,7 @@ class MainViewController: UIViewController {
                     return
                 }
                 self.sections = [
-                    RankingIllustSection(illusts: illusts, parentWidth: self.view.bounds.width),
+                    RankingIllustSection(illusts: illusts),
                     IllustSection(illusts: illusts, parentWidth: self.view.bounds.width)
                 ]
             }

@@ -34,7 +34,7 @@ class MainViewController: UIViewController {
             do {
                 (illusts, _) = try await repository.fetchIllusts()
                 sections = [
-                    RankingIllustSection(illusts: illusts, parentWidth: self.view.bounds.width),
+                    RankingIllustSection(illusts: illusts),
                     IllustSection(illusts: illusts, parentWidth: self.view.bounds.width)
                 ]
             } catch {

@@ -2,7 +2,6 @@ import UIKit
 
 struct RankingIllustSection: Section {
     let illusts: [Illust]
-    let parentWidth: CGFloat
 
     var numberOfItems: Int {
         return illusts.count
@@ -11,7 +10,7 @@ struct RankingIllustSection: Section {
     func layoutSection() -> NSCollectionLayoutSection {
         let spacing: CGFloat = 8
         let size: CGFloat = 256
-        let itemSize = NSCollectionLayoutSize(widthDimension: .absolute(size), heightDimension: .fractionalHeight(1))
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
 
         let groupSize = NSCollectionLayoutSize(widthDimension: .absolute(size), heightDimension: .absolute(size))
@@ -19,7 +18,7 @@ struct RankingIllustSection: Section {
 
         let section = NSCollectionLayoutSection(group: group)
         section.orthogonalScrollingBehavior = .continuous
-        section.contentInsets = .init(top: 0, leading: 8, bottom: 8, trailing: 0)
+        section.contentInsets = .init(top: 0, leading: spacing, bottom: spacing, trailing: 0)
         section.interGroupSpacing = spacing
 
         let sectionHeader = NSCollectionLayoutBoundarySupplementaryItem(

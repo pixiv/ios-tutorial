@@ -18,4 +18,10 @@
         
         @TutorialReference(tutorial: "doc:Practice2")
     }
+    
+    @Chapter(name: "課題3: ランキングのセクションを作ってみよう") {
+        作ってみましょう
+        
+        @TutorialReference(tutorial: "doc:Practice3")
+    }
 }

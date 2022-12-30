@@ -1,6 +1,3 @@
-import Combine
-import Firebase
-import FirebaseFirestoreSwift
 import UIKit
 
 class MainViewController: UIViewController {
@@ -10,51 +7,27 @@ class MainViewController: UIViewController {
             registerCells()
         }
     }
-    @IBOutlet private weak var loadingView: UIActivityIndicatorView!
-
-    private var sections: [Section] = [] {
-        didSet {
-            Task { @MainActor in
-                self.collectionView.collectionViewLayout = {
-                    let layout = UICollectionViewCompositionalLayout { (sectionIndex, environment) -> NSCollectionLayoutSection? in
-                        return self.sections[sectionIndex].layoutSection()
-                    }
-                    return layout
-                }()
-                self.collectionView.reloadData()
-            }
-        }
-    }
-
-    private let viewModel = IllustViewModel(repository: IllustRepositoryImpl())
-    private var cancellables = Set<AnyCancellable>()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        viewModel.$illusts
-            .receive(on: DispatchQueue.main)
-            .sink { [weak self] illusts in
-                guard let self = self else {
-                    return
+        collectionView.collectionViewLayout = {
+            let layout = UICollectionViewCompositionalLayout { (sectionIndex, environment) -> NSCollectionLayoutSection? in
+                switch sectionIndex {
+                case 0: // ランキング
+                    let item = ...
+                    let group = ...
+                    let section = ...
+                    return section
+                case 1: // おすすめ
+                    let item = ...
+                    let group = ...
+                    let section = ...
+                    return section
                 }
-                self.sections = [
-                    RankingIllustSection(illusts: illusts),
-                    IllustSection(illusts: illusts, parentWidth: self.view.bounds.width)
-                ]
             }
-            .store(in: &cancellables)
-
-        viewModel.$isRequesting
-            .receive(on: DispatchQueue.main)
-            .sink { [weak self] isRequesting in
-                self?.loadingView.isHidden = !isRequesting
-            }
-            .store(in: &cancellables)
-
-        Task {
-            await viewModel.fetchIllusts()
-        }
+            return layout
+        }()
     }
 }
 
@@ -69,15 +42,26 @@ extension MainViewController {
 
 extension MainViewController: UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return sections.count
+        return 2
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return sections[section].numberOfItems
+        return 8
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return sections[indexPath.section].configureCell(collectionView: collectionView, indexPath: indexPath)
+        switch indexPath.section {
+        case 0:
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RankingIllustCell", for: indexPath) as? RankingIllustCell else {
+                fatalError()
+            }
+            return cell
+        case 1:
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "IllustCell", for: indexPath) as? IllustCell else {
+                fatalError()
+            }
+            return cell
+        }
     }
 
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {

@@ -1,14 +1,11 @@
 import UIKit
 
 struct RankingIllustSection: Section {
-    let illusts: [Illust]
-
     var numberOfItems: Int {
-        return illusts.count
+        return 4
     }
 
     func layoutSection() -> NSCollectionLayoutSection {
-        let spacing: CGFloat = 8
         let size: CGFloat = 256
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
@@ -18,8 +15,6 @@ struct RankingIllustSection: Section {
 
         let section = NSCollectionLayoutSection(group: group)
         section.orthogonalScrollingBehavior = .continuous
-        section.contentInsets = .init(top: 0, leading: spacing, bottom: spacing, trailing: 0)
-        section.interGroupSpacing = spacing
 
         let sectionHeader = NSCollectionLayoutBoundarySupplementaryItem(
             layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .absolute(32)),
@@ -34,7 +29,6 @@ struct RankingIllustSection: Section {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RankingIllustCell", for: indexPath) as? RankingIllustCell else {
             fatalError()
         }
-        cell.bind(illusts[indexPath.item])
         return cell
     }
 }

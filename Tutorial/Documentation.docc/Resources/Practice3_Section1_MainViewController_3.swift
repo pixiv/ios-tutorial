@@ -1,72 +1,27 @@
-import Combine
-import Firebase
-import FirebaseFirestoreSwift
 import UIKit
 
 class MainViewController: UIViewController {
     @IBOutlet private weak var collectionView: UICollectionView! {
         didSet {
-            collectionView.delegate = self
             collectionView.dataSource = self
             registerCells()
         }
     }
-    @IBOutlet private weak var loadingView: UIActivityIndicatorView!
 
-    private var sections: [Section] = [] {
-        didSet {
-            Task { @MainActor in
-                self.collectionView.collectionViewLayout = {
-                    let layout = UICollectionViewCompositionalLayout { (sectionIndex, environment) -> NSCollectionLayoutSection? in
-                        return self.sections[sectionIndex].layoutSection()
-                    }
-                    return layout
-                }()
-                self.collectionView.reloadData()
-            }
-        }
-    }
-
-    private let viewModel = IllustViewModel(repository: IllustRepositoryImpl())
-    private var cancellables = Set<AnyCancellable>()
+    private var sections: [Section] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        viewModel.$illusts
-            .receive(on: DispatchQueue.main)
-            .sink { [weak self] illusts in
-                guard let self = self else {
-                    return
-                }
-                self.sections = [
-                    RankingIllustSection(illusts: illusts),
-                    IllustSection(illusts: illusts, parentWidth: self.view.bounds.width)
-                ]
+        sections = [
+            IllustSection(parentWidth: self.view.bounds.width)
+        ]
+        collectionView.collectionViewLayout = {
+            let layout = UICollectionViewCompositionalLayout { (sectionIndex, environment) -> NSCollectionLayoutSection? in
+                return self.sections[sectionIndex].layoutSection()
             }
-            .store(in: &cancellables)
-
-        viewModel.$isRequesting
-            .receive(on: DispatchQueue.main)
-            .sink { [weak self] isRequesting in
-                self?.loadingView.isHidden = !isRequesting
-            }
-            .store(in: &cancellables)
-
-        Task {
-            await viewModel.fetchIllusts()
-        }
-    }
-}
-
-extension MainViewController: UIScrollViewDelegate {
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        guard scrollView.contentOffset.y >= scrollView.contentSize.height - scrollView.frame.size.height else {
-            return
-        }
-        Task {
-            await viewModel.fetchNextIllusts()
-        }
+            return layout
+        }()
     }
 }
 
@@ -77,9 +32,6 @@ extension MainViewController {
         collectionView.register(UINib(nibName: "IllustCell", bundle: nil),  forCellWithReuseIdentifier: "IllustCell")
         collectionView.register(UINib(nibName: "RankingIllustCell", bundle: nil),  forCellWithReuseIdentifier: "RankingIllustCell")
     }
-}
-
-extension MainViewController: UICollectionViewDelegate {
 }
 
 extension MainViewController: UICollectionViewDataSource {

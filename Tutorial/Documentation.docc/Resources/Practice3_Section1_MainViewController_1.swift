@@ -1,6 +1,3 @@
-import Combine
-import Firebase
-import FirebaseFirestoreSwift
 import UIKit
 
 class MainViewController: UIViewController {
@@ -10,51 +7,36 @@ class MainViewController: UIViewController {
             registerCells()
         }
     }
-    @IBOutlet private weak var loadingView: UIActivityIndicatorView!
-
-    private var sections: [Section] = [] {
-        didSet {
-            Task { @MainActor in
-                self.collectionView.collectionViewLayout = {
-                    let layout = UICollectionViewCompositionalLayout { (sectionIndex, environment) -> NSCollectionLayoutSection? in
-                        return self.sections[sectionIndex].layoutSection()
-                    }
-                    return layout
-                }()
-                self.collectionView.reloadData()
-            }
-        }
-    }
-
-    private let viewModel = IllustViewModel(repository: IllustRepositoryImpl())
-    private var cancellables = Set<AnyCancellable>()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        viewModel.$illusts
-            .receive(on: DispatchQueue.main)
-            .sink { [weak self] illusts in
-                guard let self = self else {
-                    return
-                }
-                self.sections = [
-                    RankingIllustSection(illusts: illusts),
-                    IllustSection(illusts: illusts, parentWidth: self.view.bounds.width)
-                ]
-            }
-            .store(in: &cancellables)
+        collectionView.collectionViewLayout = {
+            let layout = UICollectionViewCompositionalLayout { (sectionIndex, environment) -> NSCollectionLayoutSection? in
+                let spacing: CGFloat = 8
+                let size: CGFloat = (self.view.bounds.width - spacing) / 2
 
-        viewModel.$isRequesting
-            .receive(on: DispatchQueue.main)
-            .sink { [weak self] isRequesting in
-                self?.loadingView.isHidden = !isRequesting
-            }
-            .store(in: &cancellables)
+                let itemSize = NSCollectionLayoutSize(widthDimension: .absolute(size), heightDimension: .fractionalHeight(1))
+                let item = NSCollectionLayoutItem(layoutSize: itemSize)
 
-        Task {
-            await viewModel.fetchIllusts()
-        }
+                let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(size))
+                let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
+                group.interItemSpacing = .fixed(spacing)
+
+                let section = NSCollectionLayoutSection(group: group)
+                section.interGroupSpacing = spacing
+
+                let sectionHeader = NSCollectionLayoutBoundarySupplementaryItem(
+                    layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .absolute(32)),
+                    elementKind: "RecommendedHeader",
+                    alignment: .top
+                )
+                section.boundarySupplementaryItems = [sectionHeader]
+
+                return section
+            }
+            return layout
+        }()
     }
 }
 
@@ -69,15 +51,18 @@ extension MainViewController {
 
 extension MainViewController: UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return sections.count
+        return 1
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return sections[section].numberOfItems
+        return 8
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return sections[indexPath.section].configureCell(collectionView: collectionView, indexPath: indexPath)
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "IllustCell", for: indexPath) as? IllustCell else {
+            fatalError()
+        }
+        return cell
     }
 
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {

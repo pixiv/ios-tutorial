@@ -1,0 +1,96 @@
+@Tutorial(time: 50) {
+    @Intro(title: "課題3: ランキングのセクションを作ってみよう") {
+        
+    }
+    
+    @Section(title: "セクションを管理しやすくする") {
+        @ContentAndMedia {
+            aaa
+        }
+            
+        @Steps {
+            @Step {
+                ランキング用のセルを作っておきます。背景色は分かりやすいように緑色にします。また、デザイン上では角丸が設定されているのでこちらも設定します
+                
+                @Code(name: "RankingIllustCell.swift", file: Practice3_Section1_RankingIllustCell_1.swift)
+            }
+            
+            @Step {
+                RankingIllustCellを登録します。ヘッダーも登録しておきます
+                
+                @Code(name: "MainViewController.swift", file: Practice3_Section1_MainViewController_1.swift, previousFile: Practice2_Section1_MainViewController_3.swift)
+            }
+
+            @Step {
+                ランキングのセクションを作成する方針を確認していきます。ここはコードを書き写さなくて大丈夫です。セクションの数を2つに増やしてsectionが0であればランキング、1であればおすすめを表示するのようにすれば実現できそうな気がします
+                
+                しかし、switch文などが増えることでレイアウトを作成するコードが長くなってしまい、見通しが悪くなってしまいます。また0番であればランキング、1番であればおすすめのような条件分岐を数カ所に書く必要があり、バグの原因になりそうです
+                
+                @Code(name: "MainViewController.swift", file: Practice3_Section1_MainViewController_2.swift)
+            }
+            
+            @Step {
+                複数のセクションを管理しやすいようにprotocolを作成してみます。セクションの中に含まれるアイテム数、セクション内のレイアウト、セルを作って返すメソッドを作れば、MainViewControllerで個別のセクションに関する処理を書かなくて済みそうです
+                
+                @Code(name: "Section.swift", file: Practice3_Section1_Section_1.swift)
+            }
+            
+            @Step {
+                IllustSectionのstructを作り、Sectionを実装していきます。今までMainViewControllerにベタ書きしていたおすすめイラストのセクションをIllustSectionに移していきます
+                
+                @Code(name: "IllustSection.swift", file: Practice3_Section1_IllustSection_1.swift)
+            }
+            
+            @Step {
+                このファイル内ではViewControllerのviewのサイズを取ることができないため、structのイニシャライザでparentWidthを渡すようにします
+                
+                @Code(name: "IllustSection.swift", file: Practice3_Section1_IllustSection_2.swift)
+            }
+            
+            @Step {
+                Sectionの配列を作成し、ベタ書きしていた箇所をsectionsを見るように変えていきます。これでかなりMainViewControllerがスッキリしました
+                
+                @Code(name: "MainViewController.swift", file: Practice3_Section1_MainViewController_3.swift, previousFile: Practice3_Section1_MainViewController_2.swift)
+            }
+        }
+    }
+
+    @Section(title: "ランキングのセクションを作成する") {
+        @ContentAndMedia {
+            aaa
+        }
+
+        @Steps {
+            @Step {
+                ランキング用のセクションを作成していきます
+                
+                @Code(name: "RankingIllustSection.swift", file: Practice3_Section2_RankingIllustSection_1.swift)
+            }
+            
+            @Step {
+                デザインを確認すると、各セルのサイズは256x256になっています。GroupのLayoutSizeに `.absolute` で値を入れていきます。
+                
+                @Code(name: "RankingIllustSection.swift", file: Practice3_Section2_RankingIllustSection_2.swift)
+            }
+            
+            @Step {
+                ランキングのセルは横スクロールできるようにしたいので、sectionの `orthogonalScrollingBehavior` に `.continuous` を設定します
+                
+                @Code(name: "RankingIllustSection.swift", file: Practice3_Section2_RankingIllustSection_3.swift)
+            }
+            
+            @Step {
+                デザイン通りになるようにスペーシングを適切に設定していきます
+                
+                @Code(name: "RankingIllustSection.swift", file: Practice3_Section2_RankingIllustSection_4.swift)
+            }
+            
+            @Step {
+                ランキングのセクションもsectionsの配列に追加します
+                
+                @Code(name: "MainViewController.swift", file: Practice3_Section2_MainViewController_1.swift, previousFile: Practice3_Section1_MainViewController_3.swift)
+            }
+        }
+    }
+}
+
