@@ -39,7 +39,7 @@ final class IllustViewModel {
         do {
             let illusts = try await api.getRecommended(offset: offset)
             self.recommendedIllusts += illusts
-            self.offset += illusts.count
+            self.offset = recommendedIllusts.count
             self.hasNext = !illusts.isEmpty
         } catch {
             print(error)

@@ -1,0 +1,49 @@
+@Tutorial(time: 50) {
+    @Intro(title: "課題7: 無限スクロールを実装してみよう") {
+        おすすめのイラストは、スクロールで下まで読み込んだときに次のイラストを表示するようにしたいです。IllustAPIMockはページング処理を検証しやすいように4個ずつイラストを読み込むようになっています。実際の開発ではそこまで少ないことはなく、10個とか20個にすることが多いと思います
+    }
+    
+    @Section(title: "課題7") {
+        @ContentAndMedia {
+        }
+            
+        @Steps {
+            @Step {
+                CollectionViewが最後まで読み込まれたことを判定する処理を作ります。いくつか方法がありますが、UIScrollViewDelegateの `func scrollViewDidScroll(_ scrollView: UIScrollView)` を使います
+                
+                @Code(name: "MainViewController.swift", file: Practice7_Section1_MainViewController_1.swift, previousFile: Practice6_Section1_MainViewController_1.swift)
+            }
+            
+            @Step {
+                Y軸のスクロールの量(contentOffset.y)が、scrollView内の内容の高さからscrollView自体の高さを引いた値より大きければ一番下まで読み込まれたと判定することにします。下まで読み込んだらViewModelに次のイラストを取得して欲しいことを伝えます
+                
+                @Code(name: "MainViewController.swift", file: Practice7_Section1_MainViewController_2.swift)
+            }
+
+            @Step {
+                ViewModelにfetchNextIllustsメソッドを実装していきます。
+                
+                @Code(name: "IllustViewModel.swift", file: Practice7_Section1_IllustViewModel_1.swift, previousFile: Practice6_Section1_IllustViewModel_1.swift)
+            }
+            
+            @Step {
+                APIのgetRecommendedにはoffsetを指定できるオプションがあります。現在のrecommendedIllustsの個数をoffsetとして記録しておき、それを使用してページングの処理を書いていきます
+                
+                @Code(name: "IllustViewModel.swift", file: Practice7_Section1_IllustViewModel_2.swift)
+            }
+            
+            @Step {
+                MainViewControllerのスクロールの判定は何度も呼ばれてしまう可能性があります。その度に無駄なAPIリクエストが発生しないようにisRequestingがtrueの際は早期リターンするようにします
+                
+                @Code(name: "IllustViewModel.swift", file: Practice7_Section1_IllustViewModel_3.swift)
+            }
+            
+            @Step {
+                また、前回のリクエストが空だった場合も作品が存在しないということなので、リクエストしないように防ぎます
+                
+                @Code(name: "IllustViewModel.swift", file: Practice7_Section1_IllustViewModel_4.swift)
+            }
+        }
+    }
+}
+

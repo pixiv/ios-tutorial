@@ -1,7 +1,6 @@
 import Combine
 import IllustAPIMock
 
-@MainActor
 final class IllustViewModel {
     @Published var rankingIllusts: [Illust] = []
     @Published var recommendedIllusts: [Illust] = []

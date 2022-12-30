@@ -42,4 +42,10 @@
         
         @TutorialReference(tutorial: "doc:Practice6")
     }
+    
+    @Chapter(name: "課題7: 無限スクロールを実装してみよう") {
+        作ってみましょう
+        
+        @TutorialReference(tutorial: "doc:Practice7")
+    }
 }

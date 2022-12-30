@@ -22,4 +22,7 @@ final class IllustViewModel {
         }
         isRequesting = false
     }
+
+    func fetchNextIllusts() async {
+    }
 }
