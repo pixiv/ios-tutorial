@@ -1,0 +1,49 @@
+@Tutorial(time: 50) {
+    @Intro(title: "課題5: MVVMにしてみよう") {
+        
+    }
+    
+    @Section(title: "課題5") {
+        @ContentAndMedia {
+        }
+            
+        @Steps {
+            @Step {
+                MainViewController用のViewModelを作っていきます。名前はIllustViewModelとしておきましょう
+                
+                @Code(name: "IllustViewModel.swift", file: Practice5_Section1_IllustViewModel_1.swift)
+            }
+            
+            @Step {
+                ランキングのイラストと、おすすめのイラストを保持しておくためのプロパティを生やします。MainViewControllerからViewModelの変更を購読できるように `@Published` というProperty Wrapperをつけます。
+                
+                @Code(name: "IllustViewModel.swift", file: Practice5_Section1_IllustViewModel_2.swift)
+            }
+            
+            @Step {
+                Practice4で書いた、APIリクエストの処理をViewModelに持ってきます
+                
+                @Code(name: "IllustViewModel.swift", file: Practice5_Section1_IllustViewModel_2.swift)
+            }
+            
+            @Step {
+                ViewController側でViewModelを初期化します
+                
+                @Code(name: "MainViewController.swift", file: Practice5_Section1_MainViewController_1.swift, previousFile: Practice4_Section1_MainViewController_4.swift)
+            }
+            
+            @Step {
+                fetch処理を呼び出すようにします
+                
+                @Code(name: "MainViewController.swift", file: Practice5_Section1_MainViewController_2.swift)
+            }
+            
+            @Step {
+                ViewModelの変更を購読して、sectionsに反映させるようにします
+                
+                @Code(name: "MainViewController.swift", file: Practice5_Section1_MainViewController_3.swift)
+            }
+        }
+    }
+}
+

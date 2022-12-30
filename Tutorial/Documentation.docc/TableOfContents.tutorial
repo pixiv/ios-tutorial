@@ -30,4 +30,10 @@
         
         @TutorialReference(tutorial: "doc:Practice4")
     }
+    
+    @Chapter(name: "課題5: MVVMにしてみよう") {
+        作ってみましょう
+        
+        @TutorialReference(tutorial: "doc:Practice5")
+    }
 }

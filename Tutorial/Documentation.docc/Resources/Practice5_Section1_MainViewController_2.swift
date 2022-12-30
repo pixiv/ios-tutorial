@@ -25,24 +25,9 @@ class MainViewController: UIViewController {
     }
 
     private let viewModel = IllustViewModel(api: IllustAPIMock())
-    private var cancellables = Set<AnyCancellable>()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        viewModel.$rankingIllusts
-            .combineLatest(viewModel.$recommendedIllusts)
-            .receive(on: DispatchQueue.main)
-            .sink { [weak self] rankingIllusts, recommendedIllusts in
-                guard let self = self else {
-                    return
-                }
-                self.sections = [
-                    RankingIllustSection(illusts: rankingIllusts),
-                    IllustSection(illusts: recommendedIllusts, parentWidth: self.view.bounds.width)
-                ]
-            }
-            .store(in: &cancellables)
 
         Task {
             await viewModel.fetchIllusts()
