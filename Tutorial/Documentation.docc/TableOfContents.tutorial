@@ -24,4 +24,10 @@
         
         @TutorialReference(tutorial: "doc:Practice3")
     }
+    
+    @Chapter(name: "課題4: イラストの情報を取ってきて表示しよう") {
+        作ってみましょう
+        
+        @TutorialReference(tutorial: "doc:Practice4")
+    }
 }

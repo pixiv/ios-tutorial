@@ -1,0 +1,81 @@
+@Tutorial(time: 50) {
+    @Intro(title: "課題4: イラストの情報を取ってきて表示しよう") {
+    }
+    
+    @Section(title: "イラストの情報を取ってくる") {
+        @ContentAndMedia {
+            aaa
+        }
+            
+        @Steps {
+            @Step {
+                aaa
+                
+                @Code(name: "MainViewController.swift", file: Practice4_Section1_MainViewController_1.swift, previousFile: Practice3_Section2_MainViewController_1.swift)
+            }
+            
+            @Step {
+                bbb
+                
+                @Code(name: "MainViewController.swift", file: Practice4_Section1_MainViewController_2.swift)
+            }
+            
+            @Step {
+                IllustSectionにIllustの配列を渡して、Cellに渡せるようにします
+                
+                @Code(name: "IllustSection.swift", file: Practice4_Section1_IllustSection_1.swift, previousFile: Practice3_Section1_IllustSection_2.swift)
+            }
+            
+            @Step {
+                IllustCellにIllustを渡せるようにします
+                
+                @Code(name: "IllustCell.swift", file: Practice4_Section1_IllustCell_1.swift, previousFile: Practice1_Section1_IllustCell_1.swift)
+            }
+            
+            @Step {
+                RankingIllustSectionにもIllustの配列を渡して、Cellに渡せるようにします
+                
+                @Code(name: "RankingIllustSection.swift", file: Practice4_Section1_RankingIllustSection_1.swift, previousFile: Practice3_Section2_RankingIllustSection_4.swift)
+            }
+            
+            @Step {
+                RankingIllustCellにIllustを渡せるようにします
+                
+                @Code(name: "RankingIllustCell.swift", file: Practice4_Section1_RankingIllustCell_1.swift, previousFile: Practice3_Section1_RankingIllustCell_1.swift)
+            }
+            
+            @Step {
+                実際にAPIから取得したデータをIllustSectionとRankingIllustSectionに渡します
+                
+                @Code(name: "MainViewController.swift", file: Practice4_Section1_MainViewController_3.swift, previousFile: Practice4_Section1_MainViewController_2.swift)
+            }
+            
+            @Step {
+                sectionsを更新したあとにcollectionViewLayoutを書き換えて描画を更新する必要がありますが、今後sectionsを変更する箇所が増えてくると、その度にこの処理をコピペしていては冗長になってしまうため、sectionsのdidSet内に移しました
+                
+                @Code(name: "MainViewController.swift", file: Practice4_Section1_MainViewController_4.swift)
+            }
+        }
+    }
+        
+    @Section(title: "Nukeで画像を表示する") {
+        @ContentAndMedia {
+            aaa
+        }
+            
+        @Steps {
+            @Step {
+                aaa
+                
+                @Code(name: "IllustCell.swift", file: Practice4_Section1_IllustCell_2.swift, previousFile: Practice4_Section1_IllustCell_1.swift)
+            }
+            
+            @Step {
+                aaa
+                
+                @Code(name: "RankingIllustCell.swift", file: Practice4_Section1_RankingIllustCell_2.swift, previousFile: Practice4_Section1_RankingIllustCell_1.swift)
+            }
+        }
+    }
+}
+
