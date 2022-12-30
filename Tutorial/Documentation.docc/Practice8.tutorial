@@ -32,7 +32,7 @@
             }
             
             @Step {
-                いいねがされたら表示を更新します。recommendedIllustsをすべて見て、IDが同じもののisFavoritedをtrueにします。
+                いいねがされたら表示を更新します。recommendedIllustsをすべて見て、IDが同じもののisFavoritedをtrueにします
                 
                 ただ、これでアプリを触ってみると、APIの通信が遅いため表示の反映までに時間が掛かってしまい、押されたかどうか不安になってしまいます。どうしたら良いでしょうか
                 

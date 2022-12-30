@@ -30,7 +30,7 @@
             }
             
             @Step {
-                2列表示を作るにはいくつか方法がありますが、今回は新しめのAPIであるCompositionalLayoutを使っていきます。最初は難しいと感じるかもしれませんが、理解して使うことができればApp Storeのような複雑なレイアウトも組むことができます。
+                2列表示を作るにはいくつか方法がありますが、今回は新しめのAPIであるCompositionalLayoutを使っていきます。最初は難しいと感じるかもしれませんが、理解して使うことができればApp Storeのような複雑なレイアウトも組むことができます
                 
                 違う方法で2列表示を作ることもできますが、今回のアプリの完成形を考えると、ランキングのUIに横スクロールが使われているのでCompositionalLayoutを使うのが適切と判断することができます
                 
@@ -38,14 +38,14 @@
             }
             
             @Step {
-                CompositionalLayoutには、Section、Group、Itemという概念があり、それぞれのレイアウト方法を記述することで様々なレイアウトが組めるようになっています。
+                CompositionalLayoutには、Section、Group、Itemという概念があり、それぞれのレイアウト方法を記述することで様々なレイアウトが組めるようになっています
                 詳しくは [ドキュメント](https://developer.apple.com/documentation/uikit/uicollectionviewcompositionallayout) を見ると良いでしょう
                 
                 @Code(name: "MainViewController.swift", file: Practice1_Section1_MainViewController_4.swift)
             }
             
             @Step {
-                今回は2列表示にしたいので、それぞれのセルが画面幅の1/2になっていれば良いです。画面幅の1/2を計算して、Itemのwidthと、ItemをまとめるGroupのheightに設定してあげます。 `.absolute` を使うことで固定値を設定できます。
+                今回は2列表示にしたいので、それぞれのセルが画面幅の1/2になっていれば良いです。画面幅の1/2を計算して、Itemのwidthと、ItemをまとめるGroupのheightに設定してあげます。 `.absolute` を使うことで固定値を設定できます
                 
                 @Code(name: "MainViewController.swift", file: Practice1_Section1_MainViewController_5.swift)
             }

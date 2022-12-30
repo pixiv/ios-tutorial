@@ -5,7 +5,7 @@
     
     @Section(title: "課題2") {
         @ContentAndMedia {
-            ヘッダーを作る方法もいくつかありますが、Practice1で使用したCompositionalLayoutではSectionに対してSupplementaryViewと呼ばれる付加的なViewをつけることができます
+            ヘッダーを作る方法もいくつかありますが、課題1で使用したCompositionalLayoutではSectionに対してSupplementaryViewと呼ばれる付加的なViewをつけることができます
         }
             
         @Steps {

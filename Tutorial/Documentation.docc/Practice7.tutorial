@@ -21,7 +21,7 @@
             }
 
             @Step {
-                ViewModelにfetchNextIllustsメソッドを実装していきます。
+                ViewModelにfetchNextIllustsメソッドを実装していきます
                 
                 @Code(name: "IllustViewModel.swift", file: Practice7_Section1_IllustViewModel_1.swift, previousFile: Practice6_Section1_IllustViewModel_1.swift)
             }

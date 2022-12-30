@@ -2,7 +2,9 @@
     @Intro(title: "はじめに") {
         お絵かきSNSの開発を通して、実例に近いiOSアプリ開発を学んでいきましょう。
         
-        初心者を対象読者としていますが、前提としてSwiftでの基本的なプログラミングの知識や、基本的なUIKitの知識が求められます。基本的なSwiftやUIKitの知識は、Appleが提供している [iOS App Dev Tutorial](https://developer.apple.com/tutorials/app-dev-training) を一通りやることで身につけることができます。英語の教材ですが、Google翻訳やDeepLなどの翻訳ツールを使うことで、概ね理解することができると思います。
+        初学者を対象読者としていますが、前提としてSwiftでの基本的なプログラミングの知識や、基本的なUIKitの知識が求められます。基本的なSwiftやUIKitの知識は、Appleが提供している [iOS App Dev Tutorial](https://developer.apple.com/tutorials/app-dev-training) を一通りやることで身につけることができます。英語の教材ですが、Google翻訳やDeepLなどの翻訳ツールを使うことで、概ね理解することができると思います。
+        
+        また、課題5からは [iOSアプリ設計パターン入門](https://peaks.cc/books/iOS_architecture) を読んでおくことでスムーズに実装することができます。
 
         この教材の解答は全てUIKitで作成しています。現在主流になっているUIフレームワークはSwiftUIですが、SwiftUIのチュートリアルは今後増えていくと思うため、あえて作成していません。解答はありませんが、課題はSwiftUIの学習にも使うことができます。
     }
