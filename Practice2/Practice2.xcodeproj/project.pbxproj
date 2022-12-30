@@ -13,13 +13,10 @@
 		244ABE9128F0119600BD1F3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 244ABE9028F0119600BD1F3F /* Assets.xcassets */; };
 		244ABE9428F0119600BD1F3F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 244ABE9228F0119600BD1F3F /* LaunchScreen.storyboard */; };
 		244ABEBB28F014B000BD1F3F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244ABEAA28F014B000BD1F3F /* MainViewController.swift */; };
-		244ABEC028F014B000BD1F3F /* RankingIllustCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244ABEB128F014B000BD1F3F /* RankingIllustCell.swift */; };
-		244ABEC128F014B000BD1F3F /* IllustSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244ABEB228F014B000BD1F3F /* IllustSection.swift */; };
 		244ABEC228F014B000BD1F3F /* IllustCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244ABEB328F014B000BD1F3F /* IllustCell.swift */; };
-		244ABEC328F014B000BD1F3F /* RankingIllustCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 244ABEB428F014B000BD1F3F /* RankingIllustCell.xib */; };
-		244ABEC428F014B000BD1F3F /* RankingIllustSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244ABEB528F014B000BD1F3F /* RankingIllustSection.swift */; };
-		244ABEC528F014B000BD1F3F /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244ABEB628F014B000BD1F3F /* Section.swift */; };
 		244ABEC628F014B000BD1F3F /* IllustCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 244ABEB728F014B000BD1F3F /* IllustCell.xib */; };
+		24BA98C9295E7BC900103156 /* HeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BA98C7295E7BC900103156 /* HeaderCell.swift */; };
+		24BA98CA295E7BC900103156 /* HeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24BA98C8295E7BC900103156 /* HeaderCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,13 +28,10 @@
 		244ABE9328F0119600BD1F3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		244ABE9528F0119600BD1F3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		244ABEAA28F014B000BD1F3F /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		244ABEB128F014B000BD1F3F /* RankingIllustCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RankingIllustCell.swift; sourceTree = "<group>"; };
-		244ABEB228F014B000BD1F3F /* IllustSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IllustSection.swift; sourceTree = "<group>"; };
 		244ABEB328F014B000BD1F3F /* IllustCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IllustCell.swift; sourceTree = "<group>"; };
-		244ABEB428F014B000BD1F3F /* RankingIllustCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RankingIllustCell.xib; sourceTree = "<group>"; };
-		244ABEB528F014B000BD1F3F /* RankingIllustSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RankingIllustSection.swift; sourceTree = "<group>"; };
-		244ABEB628F014B000BD1F3F /* Section.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
 		244ABEB728F014B000BD1F3F /* IllustCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IllustCell.xib; sourceTree = "<group>"; };
+		24BA98C7295E7BC900103156 /* HeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderCell.swift; sourceTree = "<group>"; };
+		24BA98C8295E7BC900103156 /* HeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,13 +75,10 @@
 		244ABEAF28F014B000BD1F3F /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				24BA98C7295E7BC900103156 /* HeaderCell.swift */,
+				24BA98C8295E7BC900103156 /* HeaderCell.xib */,
 				244ABEB328F014B000BD1F3F /* IllustCell.swift */,
 				244ABEB728F014B000BD1F3F /* IllustCell.xib */,
-				244ABEB228F014B000BD1F3F /* IllustSection.swift */,
-				244ABEB128F014B000BD1F3F /* RankingIllustCell.swift */,
-				244ABEB428F014B000BD1F3F /* RankingIllustCell.xib */,
-				244ABEB528F014B000BD1F3F /* RankingIllustSection.swift */,
-				244ABEB628F014B000BD1F3F /* Section.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -175,9 +166,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				244ABE9428F0119600BD1F3F /* LaunchScreen.storyboard in Resources */,
-				244ABEC328F014B000BD1F3F /* RankingIllustCell.xib in Resources */,
 				244ABE9128F0119600BD1F3F /* Assets.xcassets in Resources */,
 				244ABEC628F014B000BD1F3F /* IllustCell.xib in Resources */,
+				24BA98CA295E7BC900103156 /* HeaderCell.xib in Resources */,
 				244ABE8F28F0119500BD1F3F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -189,13 +180,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				244ABEC128F014B000BD1F3F /* IllustSection.swift in Sources */,
-				244ABEC428F014B000BD1F3F /* RankingIllustSection.swift in Sources */,
-				244ABEC028F014B000BD1F3F /* RankingIllustCell.swift in Sources */,
 				244ABE8828F0119500BD1F3F /* AppDelegate.swift in Sources */,
+				24BA98C9295E7BC900103156 /* HeaderCell.swift in Sources */,
 				244ABE8A28F0119500BD1F3F /* SceneDelegate.swift in Sources */,
 				244ABEBB28F014B000BD1F3F /* MainViewController.swift in Sources */,
-				244ABEC528F014B000BD1F3F /* Section.swift in Sources */,
 				244ABEC228F014B000BD1F3F /* IllustCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

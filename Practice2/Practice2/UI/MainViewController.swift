@@ -8,47 +8,72 @@ class MainViewController: UIViewController {
         }
     }
 
-    private var sections: [Section] = [] {
-        didSet {
-            Task { @MainActor in
-                self.collectionView.collectionViewLayout = {
-                    let layout = UICollectionViewCompositionalLayout { (sectionIndex, environment) -> NSCollectionLayoutSection? in
-                        return self.sections[sectionIndex].layoutSection()
-                    }
-                    return layout
-                }()
-                self.collectionView.reloadData()
-            }
-        }
-    }
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        sections = [
-            RankingIllustSection(parentWidth: self.view.bounds.width),
-            IllustSection(parentWidth: self.view.bounds.width)
-        ]
+        collectionView.collectionViewLayout = {
+            let layout = UICollectionViewCompositionalLayout { (sectionIndex, environment) -> NSCollectionLayoutSection? in
+                let columns: CGFloat = 2
+
+                let spacing: CGFloat = 8
+                let size: CGFloat = (self.view.bounds.width - (spacing * (columns - 1))) / columns
+                let itemSize = NSCollectionLayoutSize(widthDimension: .absolute(size), heightDimension: .fractionalHeight(1))
+                let item = NSCollectionLayoutItem(layoutSize: itemSize)
+
+                let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(size))
+                let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
+                group.interItemSpacing = .fixed(spacing)
+
+                let section = NSCollectionLayoutSection(group: group)
+                section.interGroupSpacing = spacing
+
+                let sectionHeader = NSCollectionLayoutBoundarySupplementaryItem(
+                    layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .absolute(32)),
+                    elementKind: "RecommendedHeader",
+                    alignment: .top
+                )
+                section.boundarySupplementaryItems = [sectionHeader]
+
+                return section
+            }
+            return layout
+        }()
     }
 }
 
 extension MainViewController {
     private func registerCells() {
+        collectionView.register(UINib(nibName: "HeaderCell", bundle: nil), forSupplementaryViewOfKind: "RecommendedHeader", withReuseIdentifier: "HeaderCell")
         collectionView.register(UINib(nibName: "IllustCell", bundle: nil),  forCellWithReuseIdentifier: "IllustCell")
-        collectionView.register(UINib(nibName: "RankingIllustCell", bundle: nil),  forCellWithReuseIdentifier: "RankingIllustCell")
     }
 }
 
 extension MainViewController: UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return sections.count
+        return 1
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return sections[section].numberOfItems
+        return 8
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return sections[indexPath.section].configureCell(collectionView: collectionView, indexPath: indexPath)
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "IllustCell", for: indexPath) as? IllustCell else {
+            fatalError()
+        }
+        return cell
+    }
+
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        guard let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "HeaderCell", for: indexPath) as? HeaderCell else {
+            fatalError()
+        }
+        switch kind {
+        case "RecommendedHeader":
+            header.bind("Recommended")
+            return header
+        default:
+            fatalError()
+         }
     }
 }
