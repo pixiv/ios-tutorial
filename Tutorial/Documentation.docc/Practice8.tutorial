@@ -1,0 +1,56 @@
+@Tutorial(time: 50) {
+    @Intro(title: "課題8: いいねボタンを実装してみよう") {
+    }
+    
+    @Section(title: "課題8") {
+        @ContentAndMedia {
+        }
+            
+        @Steps {
+            @Step {
+                IllustCellにいいねボタンを追加していきます
+                
+                @Code(name: "IllustCell.swift", file: Practice8_Section1_IllustCell_1.swift, previousFile: Practice4_Section1_IllustCell_2.swift)
+            }
+            
+            @Step {
+                IllustCellのいいねボタンを押したときに呼ばれるhandlerをIllustSectionにも追加します
+                
+                @Code(name: "IllustSection.swift", file: Practice8_Section1_IllustSection_1.swift, previousFile: Practice4_Section1_IllustSection_1.swift)
+            }
+            
+            @Step {
+                IllustSectionに必要になったhandlerをMainViewControllerにも追加します。handlerが呼ばれたらViewModelにいいねの処理をして欲しいことを伝えます
+                
+                @Code(name: "MainViewController.swift", file: Practice8_Section1_MainViewController_1.swift, previousFile: Practice7_Section1_MainViewController_2.swift)
+            }
+            
+            @Step {
+                IllustViewModelにいいねの処理を書いていきます。APIのpostIsFavoritedを呼び出します
+                
+                @Code(name: "IllustViewModel.swift", file: Practice8_Section1_IllustViewModel_1.swift, previousFile: Practice7_Section1_IllustViewModel_4.swift)
+            }
+            
+            @Step {
+                いいねがされたら表示を更新します。recommendedIllustsをすべて見て、IDが同じもののisFavoritedをtrueにします。
+                
+                ただ、これでアプリを触ってみると、APIの通信が遅いため表示の反映までに時間が掛かってしまい、押されたかどうか不安になってしまいます。どうしたら良いでしょうか
+                
+                @Code(name: "IllustViewModel.swift", file: Practice8_Section1_IllustViewModel_2.swift)
+            }
+            
+            @Step {
+                APIのリクエストを送る前に表示を更新するようにしてみましょう。これでUIのレスポンスが良くなったように見えます
+                
+                @Code(name: "IllustViewModel.swift", file: Practice8_Section1_IllustViewModel_3.swift)
+            }
+            
+            @Step {
+                APIとの通信でエラーが起きた時は表示を戻すことによって、状態と表示の不整合を防ぐことができます
+                
+                @Code(name: "IllustViewModel.swift", file: Practice8_Section1_IllustViewModel_4.swift)
+            }
+        }
+    }
+}
+

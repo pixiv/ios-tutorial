@@ -48,4 +48,10 @@
         
         @TutorialReference(tutorial: "doc:Practice7")
     }
+    
+    @Chapter(name: "課題8: いいねボタンを実装してみよう") {
+        作ってみましょう
+        
+        @TutorialReference(tutorial: "doc:Practice8")
+    }
 }
