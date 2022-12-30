@@ -1,23 +1,27 @@
-import Firebase
+import Combine
+import IllustAPIMock
 
 @MainActor
 final class IllustViewModel {
-    @Published var illusts: [Illust] = []
-    @Published var next: DocumentSnapshot?
+    @Published var rankingIllusts: [Illust] = []
+    @Published var recommendedIllusts: [Illust] = []
+    @Published var offset: Int = 0
     @Published var hasNext: Bool = false
     @Published var isRequesting: Bool = false
 
-    private let repository: IllustRepository
+    private let api: IllustAPIMock
 
-    init(repository: IllustRepository) {
-        self.repository = repository
+    init(api: IllustAPIMock) {
+        self.api = api
     }
 
     func fetchIllusts() async {
         isRequesting = true
         do {
-            (illusts, next) = try await repository.fetchIllusts()
-            hasNext = !illusts.isEmpty
+            rankingIllusts = try await api.getRanking()
+            recommendedIllusts = try await api.getRecommended()
+            offset = recommendedIllusts.count
+            hasNext = !recommendedIllusts.isEmpty
         } catch {
             print(error)
         }
@@ -31,14 +35,11 @@ final class IllustViewModel {
         guard hasNext else {
             return
         }
-        guard let query = next else {
-            return
-        }
         isRequesting = true
         do {
-            let (illusts, next) = try await repository.fetchNextIllusts(query)
-            self.illusts += illusts
-            self.next = next
+            let illusts = try await api.getRecommended(offset: offset)
+            self.recommendedIllusts += illusts
+            self.offset += illusts.count
             self.hasNext = !illusts.isEmpty
         } catch {
             print(error)

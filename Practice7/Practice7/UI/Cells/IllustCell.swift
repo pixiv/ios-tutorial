@@ -1,3 +1,4 @@
+import IllustAPIMock
 import Nuke
 import UIKit
 
@@ -8,12 +9,7 @@ class IllustCell: UICollectionViewCell {
         }
     }
 
-    private var illust: Illust?
-
     func bind(_ illust: Illust) {
-        if let url = URL(string: illust.imageUrl) {
-            Nuke.loadImage(with: url, into: imageView)
-        }
-        self.illust = illust
+        Nuke.loadImage(with: illust.imageURL, into: imageView)
     }
 }

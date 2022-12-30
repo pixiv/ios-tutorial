@@ -1,6 +1,5 @@
 import Combine
-import Firebase
-import FirebaseFirestoreSwift
+import IllustAPIMock
 import UIKit
 
 class MainViewController: UIViewController {
@@ -25,21 +24,23 @@ class MainViewController: UIViewController {
         }
     }
 
-    private let viewModel = IllustViewModel(repository: IllustRepositoryImpl())
+    private let viewModel = IllustViewModel(api: IllustAPIMock())
     private var cancellables = Set<AnyCancellable>()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        viewModel.$illusts
+
+        viewModel.$rankingIllusts
+            .combineLatest(viewModel.$recommendedIllusts)
             .receive(on: DispatchQueue.main)
-            .sink { [weak self] illusts in
+            .sink { [weak self] rankingIllusts, recommendedIllusts in
                 guard let self = self else {
                     return
                 }
                 self.sections = [
-                    RankingIllustSection(illusts: illusts),
-                    IllustSection(illusts: illusts, parentWidth: self.view.bounds.width)
+                    RankingIllustSection(illusts: rankingIllusts),
+                    IllustSection(illusts: recommendedIllusts, parentWidth: self.view.bounds.width)
                 ]
             }
             .store(in: &cancellables)

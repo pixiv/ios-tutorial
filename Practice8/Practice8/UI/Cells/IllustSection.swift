@@ -1,3 +1,4 @@
+import IllustAPIMock
 import UIKit
 
 struct IllustSection: Section {

@@ -12,16 +12,8 @@
 		244ABE8F28F0119500BD1F3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 244ABE8D28F0119500BD1F3F /* Main.storyboard */; };
 		244ABE9128F0119600BD1F3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 244ABE9028F0119600BD1F3F /* Assets.xcassets */; };
 		244ABE9428F0119600BD1F3F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 244ABE9228F0119600BD1F3F /* LaunchScreen.storyboard */; };
-		244ABE9D28F0128800BD1F3F /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 244ABE9C28F0128800BD1F3F /* FirebaseAuth */; };
-		244ABE9F28F0128800BD1F3F /* FirebaseAuthCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 244ABE9E28F0128800BD1F3F /* FirebaseAuthCombine-Community */; };
-		244ABEA128F0128800BD1F3F /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 244ABEA028F0128800BD1F3F /* FirebaseFirestore */; };
-		244ABEA328F0128800BD1F3F /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 244ABEA228F0128800BD1F3F /* FirebaseFirestoreCombine-Community */; };
-		244ABEA528F0128800BD1F3F /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 244ABEA428F0128800BD1F3F /* FirebaseFirestoreSwift */; };
 		244ABEA828F012AD00BD1F3F /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = 244ABEA728F012AD00BD1F3F /* Nuke */; };
 		244ABEBB28F014B000BD1F3F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244ABEAA28F014B000BD1F3F /* MainViewController.swift */; };
-		244ABEBC28F014B000BD1F3F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 244ABEAB28F014B000BD1F3F /* GoogleService-Info.plist */; };
-		244ABEBD28F014B000BD1F3F /* Illust.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244ABEAD28F014B000BD1F3F /* Illust.swift */; };
-		244ABEBE28F014B000BD1F3F /* IllustRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244ABEAE28F014B000BD1F3F /* IllustRepository.swift */; };
 		244ABEBF28F014B000BD1F3F /* HeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 244ABEB028F014B000BD1F3F /* HeaderCell.xib */; };
 		244ABEC028F014B000BD1F3F /* RankingIllustCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244ABEB128F014B000BD1F3F /* RankingIllustCell.swift */; };
 		244ABEC128F014B000BD1F3F /* IllustSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244ABEB228F014B000BD1F3F /* IllustSection.swift */; };
@@ -31,6 +23,7 @@
 		244ABEC528F014B000BD1F3F /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244ABEB628F014B000BD1F3F /* Section.swift */; };
 		244ABEC628F014B000BD1F3F /* IllustCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 244ABEB728F014B000BD1F3F /* IllustCell.xib */; };
 		244ABEC728F014B000BD1F3F /* HeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244ABEB828F014B000BD1F3F /* HeaderCell.swift */; };
+		24942E48295ED326004D9E20 /* IllustAPIMock in Frameworks */ = {isa = PBXBuildFile; productRef = 24942E47295ED326004D9E20 /* IllustAPIMock */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,9 +35,6 @@
 		244ABE9328F0119600BD1F3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		244ABE9528F0119600BD1F3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		244ABEAA28F014B000BD1F3F /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		244ABEAB28F014B000BD1F3F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		244ABEAD28F014B000BD1F3F /* Illust.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Illust.swift; sourceTree = "<group>"; };
-		244ABEAE28F014B000BD1F3F /* IllustRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IllustRepository.swift; sourceTree = "<group>"; };
 		244ABEB028F014B000BD1F3F /* HeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderCell.xib; sourceTree = "<group>"; };
 		244ABEB128F014B000BD1F3F /* RankingIllustCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RankingIllustCell.swift; sourceTree = "<group>"; };
 		244ABEB228F014B000BD1F3F /* IllustSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IllustSection.swift; sourceTree = "<group>"; };
@@ -61,12 +51,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				244ABEA528F0128800BD1F3F /* FirebaseFirestoreSwift in Frameworks */,
-				244ABE9D28F0128800BD1F3F /* FirebaseAuth in Frameworks */,
-				244ABEA328F0128800BD1F3F /* FirebaseFirestoreCombine-Community in Frameworks */,
+				24942E48295ED326004D9E20 /* IllustAPIMock in Frameworks */,
 				244ABEA828F012AD00BD1F3F /* Nuke in Frameworks */,
-				244ABE9F28F0128800BD1F3F /* FirebaseAuthCombine-Community in Frameworks */,
-				244ABEA128F0128800BD1F3F /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +64,7 @@
 			children = (
 				244ABE8628F0119500BD1F3F /* Practice4 */,
 				244ABE8528F0119500BD1F3F /* Products */,
+				24942E46295ED326004D9E20 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -92,21 +79,12 @@
 		244ABE8628F0119500BD1F3F /* Practice4 */ = {
 			isa = PBXGroup;
 			children = (
-				244ABECB28F015C900BD1F3F /* Data */,
 				244ABECA28F0158D00BD1F3F /* UI */,
 				244ABEC928F0154F00BD1F3F /* Resources */,
 				244ABE8728F0119500BD1F3F /* AppDelegate.swift */,
 				244ABE8928F0119500BD1F3F /* SceneDelegate.swift */,
 			);
 			path = Practice4;
-			sourceTree = "<group>";
-		};
-		244ABEAC28F014B000BD1F3F /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				244ABEAD28F014B000BD1F3F /* Illust.swift */,
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		244ABEAF28F014B000BD1F3F /* Cells */ = {
@@ -129,7 +107,6 @@
 			isa = PBXGroup;
 			children = (
 				244ABE9028F0119600BD1F3F /* Assets.xcassets */,
-				244ABEAB28F014B000BD1F3F /* GoogleService-Info.plist */,
 				244ABE9528F0119600BD1F3F /* Info.plist */,
 				244ABE9228F0119600BD1F3F /* LaunchScreen.storyboard */,
 			);
@@ -146,13 +123,11 @@
 			path = UI;
 			sourceTree = "<group>";
 		};
-		244ABECB28F015C900BD1F3F /* Data */ = {
+		24942E46295ED326004D9E20 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				244ABEAE28F014B000BD1F3F /* IllustRepository.swift */,
-				244ABEAC28F014B000BD1F3F /* Models */,
 			);
-			path = Data;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,12 +147,8 @@
 			);
 			name = Practice4;
 			packageProductDependencies = (
-				244ABE9C28F0128800BD1F3F /* FirebaseAuth */,
-				244ABE9E28F0128800BD1F3F /* FirebaseAuthCombine-Community */,
-				244ABEA028F0128800BD1F3F /* FirebaseFirestore */,
-				244ABEA228F0128800BD1F3F /* FirebaseFirestoreCombine-Community */,
-				244ABEA428F0128800BD1F3F /* FirebaseFirestoreSwift */,
 				244ABEA728F012AD00BD1F3F /* Nuke */,
+				24942E47295ED326004D9E20 /* IllustAPIMock */,
 			);
 			productName = Practice4;
 			productReference = 244ABE8428F0119500BD1F3F /* Practice4.app */;
@@ -208,7 +179,6 @@
 			);
 			mainGroup = 244ABE7B28F0119500BD1F3F;
 			packageReferences = (
-				244ABE9B28F0128800BD1F3F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				244ABEA628F012AD00BD1F3F /* XCRemoteSwiftPackageReference "Nuke" */,
 			);
 			productRefGroup = 244ABE8528F0119500BD1F3F /* Products */;
@@ -227,7 +197,6 @@
 			files = (
 				244ABEBF28F014B000BD1F3F /* HeaderCell.xib in Resources */,
 				244ABE9428F0119600BD1F3F /* LaunchScreen.storyboard in Resources */,
-				244ABEBC28F014B000BD1F3F /* GoogleService-Info.plist in Resources */,
 				244ABEC328F014B000BD1F3F /* RankingIllustCell.xib in Resources */,
 				244ABE9128F0119600BD1F3F /* Assets.xcassets in Resources */,
 				244ABEC628F014B000BD1F3F /* IllustCell.xib in Resources */,
@@ -242,7 +211,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				244ABEBD28F014B000BD1F3F /* Illust.swift in Sources */,
 				244ABEC128F014B000BD1F3F /* IllustSection.swift in Sources */,
 				244ABEC428F014B000BD1F3F /* RankingIllustSection.swift in Sources */,
 				244ABEC028F014B000BD1F3F /* RankingIllustCell.swift in Sources */,
@@ -252,7 +220,6 @@
 				244ABEBB28F014B000BD1F3F /* MainViewController.swift in Sources */,
 				244ABEC528F014B000BD1F3F /* Section.swift in Sources */,
 				244ABEC228F014B000BD1F3F /* IllustCell.swift in Sources */,
-				244ABEBE28F014B000BD1F3F /* IllustRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,14 +437,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		244ABE9B28F0128800BD1F3F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 9.0.0;
-			};
-		};
 		244ABEA628F012AD00BD1F3F /* XCRemoteSwiftPackageReference "Nuke" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/kean/Nuke";
@@ -489,35 +448,14 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		244ABE9C28F0128800BD1F3F /* FirebaseAuth */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 244ABE9B28F0128800BD1F3F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAuth;
-		};
-		244ABE9E28F0128800BD1F3F /* FirebaseAuthCombine-Community */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 244ABE9B28F0128800BD1F3F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = "FirebaseAuthCombine-Community";
-		};
-		244ABEA028F0128800BD1F3F /* FirebaseFirestore */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 244ABE9B28F0128800BD1F3F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseFirestore;
-		};
-		244ABEA228F0128800BD1F3F /* FirebaseFirestoreCombine-Community */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 244ABE9B28F0128800BD1F3F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = "FirebaseFirestoreCombine-Community";
-		};
-		244ABEA428F0128800BD1F3F /* FirebaseFirestoreSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 244ABE9B28F0128800BD1F3F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseFirestoreSwift;
-		};
 		244ABEA728F012AD00BD1F3F /* Nuke */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 244ABEA628F012AD00BD1F3F /* XCRemoteSwiftPackageReference "Nuke" */;
 			productName = Nuke;
+		};
+		24942E47295ED326004D9E20 /* IllustAPIMock */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = IllustAPIMock;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

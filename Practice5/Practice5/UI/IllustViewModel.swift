@@ -1,18 +1,21 @@
-import Firebase
+import Combine
+import IllustAPIMock
 
 @MainActor
 final class IllustViewModel {
-    @Published var illusts: [Illust] = []
+    @Published var rankingIllusts: [Illust] = []
+    @Published var recommendedIllusts: [Illust] = []
 
-    private let repository: IllustRepository
+    private let api: IllustAPIMock
 
-    init(repository: IllustRepository) {
-        self.repository = repository
+    init(api: IllustAPIMock) {
+        self.api = api
     }
 
     func fetchIllusts() async {
         do {
-            (illusts, _) = try await repository.fetchIllusts()
+            rankingIllusts = try await api.getRanking()
+            recommendedIllusts = try await api.getRecommended()
         } catch {
             print(error)
         }

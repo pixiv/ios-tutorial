@@ -1,4 +1,3 @@
-import Nuke
 import UIKit
 
 class HeaderCell: UICollectionReusableView {

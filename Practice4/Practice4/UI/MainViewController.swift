@@ -1,5 +1,4 @@
-import Firebase
-import FirebaseFirestoreSwift
+import IllustAPIMock
 import UIKit
 
 class MainViewController: UIViewController {
@@ -24,18 +23,18 @@ class MainViewController: UIViewController {
         }
     }
 
-    private let repository: IllustRepository = IllustRepositoryImpl()
-    private var illusts: [Illust] = []
+    private let api = IllustAPIMock()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         Task {
             do {
-                (illusts, _) = try await repository.fetchIllusts()
+                let rankingIllusts = try await api.getRanking()
+                let recommendedIllusts = try await api.getRecommended()
                 sections = [
-                    RankingIllustSection(illusts: illusts),
-                    IllustSection(illusts: illusts, parentWidth: self.view.bounds.width)
+                    RankingIllustSection(illusts: rankingIllusts),
+                    IllustSection(illusts: recommendedIllusts, parentWidth: self.view.bounds.width)
                 ]
             } catch {
                 print(error)

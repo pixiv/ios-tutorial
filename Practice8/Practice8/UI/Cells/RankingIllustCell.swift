@@ -1,3 +1,4 @@
+import IllustAPIMock
 import Nuke
 import UIKit
 
@@ -11,8 +12,6 @@ class RankingIllustCell: UICollectionViewCell {
     }
 
     func bind(_ illust: Illust) {
-        if let url = URL(string: illust.imageUrl) {
-            Nuke.loadImage(with: url, into: imageView)
-        }
+        Nuke.loadImage(with: illust.imageURL, into: imageView)
     }
 }

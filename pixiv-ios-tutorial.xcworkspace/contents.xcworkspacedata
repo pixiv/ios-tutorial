@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:IllustAPIMock">
+   </FileRef>
+   <FileRef
       location = "group:Tutorial/Tutorial.xcodeproj">
    </FileRef>
    <FileRef
