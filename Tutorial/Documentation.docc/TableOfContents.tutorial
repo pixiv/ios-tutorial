@@ -36,4 +36,10 @@
         
         @TutorialReference(tutorial: "doc:Practice5")
     }
+    
+    @Chapter(name: "課題6: 通信中(ロード中)の挙動を作ってみよう") {
+        作ってみましょう
+        
+        @TutorialReference(tutorial: "doc:Practice6")
+    }
 }

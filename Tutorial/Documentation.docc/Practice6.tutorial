@@ -1,0 +1,25 @@
+@Tutorial(time: 50) {
+    @Intro(title: "課題6: 通信中(ロード中)の挙動を作ってみよう") {
+        
+    }
+    
+    @Section(title: "課題6") {
+        @ContentAndMedia {
+        }
+            
+        @Steps {
+            @Step {
+                ViewModelにisRequestingというプロパティを作り、APIの通信が呼ばれている間はtrueにします
+                
+                @Code(name: "IllustViewModel.swift", file: Practice6_Section1_IllustViewModel_1.swift, previousFile: Practice5_Section1_IllustViewModel_3.swift)
+            }
+            
+            @Step {
+                ViewControllerでViewModelのisRequestingの状態を購読し、isRequestingがtrueのときにloadingViewを表示します
+                
+                @Code(name: "MainViewController.swift", file: Practice6_Section1_MainViewController_1.swift, previousFile: Practice5_Section1_MainViewController_3.swift)
+            }
+        }
+    }
+}
+
