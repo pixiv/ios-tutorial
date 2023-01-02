@@ -7,20 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		24C84D8D295D5ADE00F67674 /* TutorialApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C84D8C295D5ADE00F67674 /* TutorialApp.swift */; };
-		24C84D8F295D5ADE00F67674 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C84D8E295D5ADE00F67674 /* ContentView.swift */; };
-		24C84D91295D5ADF00F67674 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24C84D90295D5ADF00F67674 /* Assets.xcassets */; };
-		24C84D95295D5ADF00F67674 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24C84D94295D5ADF00F67674 /* Preview Assets.xcassets */; };
 		24C84DA0295D5CDB00F67674 /* Documentation.docc in Sources */ = {isa = PBXBuildFile; fileRef = 24C84D9F295D5CDB00F67674 /* Documentation.docc */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		24C84D89295D5ADE00F67674 /* Tutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		24C84D8C295D5ADE00F67674 /* TutorialApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialApp.swift; sourceTree = "<group>"; };
-		24C84D8E295D5ADE00F67674 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		24C84D90295D5ADF00F67674 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		24C84D92295D5ADF00F67674 /* Tutorial.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Tutorial.entitlements; sourceTree = "<group>"; };
-		24C84D94295D5ADF00F67674 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		24C84D9F295D5CDB00F67674 /* Documentation.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Documentation.docc; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -55,21 +47,9 @@
 		24C84D8B295D5ADE00F67674 /* Tutorial */ = {
 			isa = PBXGroup;
 			children = (
-				24C84D8C295D5ADE00F67674 /* TutorialApp.swift */,
-				24C84D8E295D5ADE00F67674 /* ContentView.swift */,
-				24C84D90295D5ADF00F67674 /* Assets.xcassets */,
 				24C84D92295D5ADF00F67674 /* Tutorial.entitlements */,
-				24C84D93295D5ADF00F67674 /* Preview Content */,
 			);
 			path = Tutorial;
-			sourceTree = "<group>";
-		};
-		24C84D93295D5ADF00F67674 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				24C84D94295D5ADF00F67674 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -130,8 +110,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24C84D95295D5ADF00F67674 /* Preview Assets.xcassets in Resources */,
-				24C84D91295D5ADF00F67674 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,9 +120,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24C84D8F295D5ADE00F67674 /* ContentView.swift in Sources */,
 				24C84DA0295D5CDB00F67674 /* Documentation.docc in Sources */,
-				24C84D8D295D5ADE00F67674 /* TutorialApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,7 +244,7 @@
 				CODE_SIGN_ENTITLEMENTS = Tutorial/Tutorial.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Tutorial/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -304,7 +280,7 @@
 				CODE_SIGN_ENTITLEMENTS = Tutorial/Tutorial.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Tutorial/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
