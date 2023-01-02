@@ -71,6 +71,12 @@
         @ContentAndMedia {
             IllustのimageURLから画像を取得してきます。 `Data(contentsOf:)` と `UIImage(data:)` を使ってURLから画像を表示するのもありですが、Nukeなどのライブラリを使うことでディスクキャッシュなどの便利な機能を利用することができます
         }
+        
+        @Step {
+            IllustCell.xibにUIImageViewを追加します。AutoLayoutでSuperviewにフィットするようにleading, top, trailing, bottomのマージンを0に設定します。OutletをIllustCellのimageViewと紐付けます
+            
+            @Image(source: "Practice4_IllustCell.png")
+        }
             
         @Steps {
             @Step {
@@ -86,6 +92,12 @@
                 
                 @Code(name: "RankingIllustCell.swift", file: Practice4_Section1_RankingIllustCell_2.swift, previousFile: Practice4_Section1_RankingIllustCell_1.swift)
             }
+        }
+        
+        @Step {
+            RankingIllustCell.xibにUIImageViewを追加します。AutoLayoutでSuperviewに対してleading, top, trailing, bottomのマージンを0に設定します。OutletをRankingIllustCellのimageViewと紐付けます
+            
+            @Image(source: "Practice4_RankingIllustCell.png")
         }
     }
 }

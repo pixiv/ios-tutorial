@@ -14,7 +14,19 @@
             
         @Steps {
             @Step {
-                新しいViewControllerを作っていきましょう。名前は適当にMainViewControllerとしています
+                新しいプロジェクトを作成します。iOS > Appを選択します
+                
+                @Image(source: "Practice1_NewProject.png")
+            }
+            
+            @Step {
+                各項目を適当に入力します。今回はUIKitで解答していくため、InterfaceはStoryboardを選択します。Include TestsはONにしておくと良いです
+                
+                @Image(source: "Practice1_ProjectOption.png")
+            }
+            
+            @Step {
+                デフォルトで作られているViewControllerの名前をMainViewControllerに変えておきます
                 
                 @Code(name: "MainViewController.swift", file: Practice1_Section1_MainViewController_1.swift)
             }
@@ -31,6 +43,24 @@
                 DataSourceも設定していきます。DataSourceはわかりやすいように適当にSectionの数は1つ、アイテムの数は8個としておきましょう
                 
                 @Code(name: "MainViewController.swift", file: Practice1_Section1_MainViewController_2.swift, previousFile: Practice1_Section1_MainViewController_1.swift)
+            }
+            
+            @Step {
+                Main.storyboardにCollectionViewを追加します。AutoLayoutでSafe Areaに対してleading, top, trailing, bottomのマージンを0に設定します。OutletをMainViewControllerのcollectionViewと紐付けます
+                
+                @Image(source: "Practice1_Main.png")
+            }
+            
+            @Step {
+                IllustCell.xibを作ります。xibファイルを作るには、New File...からViewを選択します
+                
+                @Image(source: "Practice1_NewFile.png")
+            }
+            
+            @Step {
+                Custom ClassにIllustCellを設定します
+                
+                @Image(source: "Practice1_IllustCell.png")
             }
             
             @Step {

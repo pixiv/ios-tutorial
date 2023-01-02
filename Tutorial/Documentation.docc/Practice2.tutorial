@@ -22,6 +22,18 @@
             }
             
             @Step {
+                HeaderCell.xibを追加します。Custom ClassにHeaderCellを設定します
+                
+                @Image(source: "Practice2_HeaderCell_1.png")
+            }
+            
+            @Step {
+                UILabelを配置します。AutoLayoutでVertically in Containerと、leadingのマージンに8を設定します。OutletをHeaderCellのlabelと紐付けます
+                
+                @Image(source: "Practice2_HeaderCell_2.png")
+            }
+            
+            @Step {
                 作ったHeaderCellをCollectionViewに登録しておきます
                 
                 @Code(name: "MainViewController.swift", file: Practice2_Section1_MainViewController_1.swift, previousFile: Practice1_Section1_MainViewController_7.swift)

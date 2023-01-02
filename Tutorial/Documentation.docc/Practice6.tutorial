@@ -24,6 +24,18 @@
                 
                 @Code(name: "MainViewController.swift", file: Practice6_Section1_MainViewController_1.swift, previousFile: Practice5_Section1_MainViewController_3.swift)
             }
+            
+            @Step {
+                Main.storyboardにUIActivityIndicatorを配置します。AutoLayoutでHorizontally in ContainerとVertically in Containerを設定します。OutletをMainViewControllerのloadingViewと紐付けます
+                
+                @Image(source: "Practice6_Main_1.png")
+            }
+            
+            @Step {
+                BehaviorのAnimatingとHides When Stoppedにチェックを入れておきます
+                
+                @Image(source: "Practice6_Main_2.png")
+            }
         }
     }
 }

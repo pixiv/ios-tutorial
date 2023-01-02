@@ -9,11 +9,11 @@
         以下は解答になります。この教材では、まず解答を見ずにインターネット等を見て自分で書いてみることをおすすめしています。15分以上詰まったら見るという使い方をしても大丈夫です
     }
     
-    @Section(title: "解答: セクションを管理しやすくする") {
+    @Section(title: "解答: ランキングのセルを作る") {
         @ContentAndMedia {
-            複数のセクションを扱っていく際に現状のコードだと大変なのでまずは整理します
+            ランキングのセルを作ります
         }
-            
+        
         @Steps {
             @Step {
                 ランキング用のCellを作っておきます。背景色は分かりやすいように緑色にします。また、デザイン上では角丸が設定されているのでこちらも設定します
@@ -22,11 +22,25 @@
             }
             
             @Step {
+                RankingIllustCell.xibを追加します。Custom ClassにRankingIllustCellを設定します
+                
+                @Image(source: "Practice3_RankingIllustCell.png")
+            }
+            
+            @Step {
                 RankingIllustCellを登録します。ヘッダーも登録しておきます
                 
                 @Code(name: "MainViewController.swift", file: Practice3_Section1_MainViewController_1.swift, previousFile: Practice2_Section1_MainViewController_3.swift)
             }
-
+        }
+    }
+    
+    @Section(title: "解答: セクションを管理しやすくする") {
+        @ContentAndMedia {
+            複数のセクションを扱っていく際に現状のコードだと大変なのでまずは整理します
+        }
+            
+        @Steps {
             @Step {
                 ランキングのセクションを作成する方針を確認していきます。ここはコードを書き写さなくて大丈夫です。セクションの数を2つに増やしてsectionが0であればランキング、1であればおすすめを表示するのようにすれば実現できそうな気がします
                 

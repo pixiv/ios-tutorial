@@ -20,6 +20,18 @@
             }
             
             @Step {
+                IllustCell.xibにUIButtonを配置します。AutoLayoutでSuperviewとtrailingとbottomのマージンを0に設定します。また、widthとheightにも32を設定します。OutletをIllustCellのheartButtonと紐付けます
+                
+                @Image(source: "Practice8_IllustCell_1.png")
+            }
+            
+            @Step {
+                UIButtonのimageにheartを設定しておきます
+                
+                @Image(source: "Practice8_IllustCell_2.png")
+            }
+            
+            @Step {
                 IllustCellのいいねボタンを押したときに呼ばれるhandlerをIllustSectionにも追加します
                 
                 @Code(name: "IllustSection.swift", file: Practice8_Section1_IllustSection_1.swift, previousFile: Practice4_Section1_IllustSection_1.swift)
