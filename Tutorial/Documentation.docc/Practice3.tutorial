@@ -1,16 +1,22 @@
-@Tutorial(time: 50) {
+@Tutorial(time: 60) {
     @Intro(title: "課題3: ランキングのセクションを作ってみよう") {
+        課題1・2で作ったセクションの上に、ランキングを配置するセクションを作ってみましょう
         
+        ランキングのセクションは横スクロールできるようになっています。また、課題2でやったように何のセクションかわかるようにヘッダーも表示しましょう
+        
+        完成イメージを示したデザインファイルは [こちら](https://www.figma.com/file/EkZe8zNKd8uTr1vehAzC74/pixiv%E3%82%A2%E3%83%97%E3%83%AA%E3%82%92%E4%BD%9C%E3%81%A3%E3%81%A6%E3%81%BF%E3%82%88%E3%81%86?node-id=7%3A27&t=LvrX1uvlmhmv5YFJ-0) です
+        
+        以下は解答になります。この教材では、まず解答を見ずにインターネット等を見て自分で書いてみることをおすすめしています。15分以上詰まったら見るという使い方をしても大丈夫です
     }
     
-    @Section(title: "セクションを管理しやすくする") {
+    @Section(title: "解答: セクションを管理しやすくする") {
         @ContentAndMedia {
-            aaa
+            複数のセクションを扱っていく際に現状のコードだと大変なのでまずは整理します
         }
             
         @Steps {
             @Step {
-                ランキング用のセルを作っておきます。背景色は分かりやすいように緑色にします。また、デザイン上では角丸が設定されているのでこちらも設定します
+                ランキング用のCellを作っておきます。背景色は分かりやすいように緑色にします。また、デザイン上では角丸が設定されているのでこちらも設定します
                 
                 @Code(name: "RankingIllustCell.swift", file: Practice3_Section1_RankingIllustCell_1.swift)
             }
@@ -30,7 +36,7 @@
             }
             
             @Step {
-                複数のセクションを管理しやすいようにprotocolを作成してみます。セクションの中に含まれるアイテム数、セクション内のレイアウト、セルを作って返すメソッドを作れば、MainViewControllerで個別のセクションに関する処理を書かなくて済みそうです
+                複数のセクションを管理しやすいようにprotocolを作成してみます。セクションの中に含まれるアイテム数、セクション内のレイアウト、Cellを作って返すメソッドを作れば、MainViewControllerで個別のセクションに関する処理を書かなくて済みそうです
                 
                 @Code(name: "Section.swift", file: Practice3_Section1_Section_1.swift)
             }
@@ -55,9 +61,9 @@
         }
     }
 
-    @Section(title: "ランキングのセクションを作成する") {
+    @Section(title: "解答: ランキングのセクションを作成する") {
         @ContentAndMedia {
-            aaa
+            整理ができたので、ランキングのセクションを作っていきます
         }
 
         @Steps {
@@ -68,13 +74,13 @@
             }
             
             @Step {
-                デザインを確認すると、各セルのサイズは256x256になっています。GroupのLayoutSizeに `.absolute` で値を入れていきます。
+                デザインを確認すると、各Cellのサイズは256x256になっています。GroupのLayoutSizeに `.absolute` で値を入れていきます。
                 
                 @Code(name: "RankingIllustSection.swift", file: Practice3_Section2_RankingIllustSection_2.swift)
             }
             
             @Step {
-                ランキングのセルは横スクロールできるようにしたいので、sectionの `orthogonalScrollingBehavior` に `.continuous` を設定します
+                ランキングのCellは横スクロールできるようにしたいので、sectionの `orthogonalScrollingBehavior` に `.continuous` を設定します
                 
                 @Code(name: "RankingIllustSection.swift", file: Practice3_Section2_RankingIllustSection_3.swift)
             }

@@ -1,58 +1,60 @@
 @Tutorials(name: "お絵かきSNSを作ってみよう") {
     @Intro(title: "はじめに") {
-        お絵かきSNSの開発を通して、実例に近いiOSアプリ開発を学んでいきましょう。
+        お絵かきSNSの開発を通して、実例に近いiOSアプリ開発を学んでいきましょう
         
-        初学者を対象読者としていますが、前提としてSwiftでの基本的なプログラミングの知識や、基本的なUIKitの知識が求められます。基本的なSwiftやUIKitの知識は、Appleが提供している [iOS App Dev Tutorial](https://developer.apple.com/tutorials/app-dev-training) を一通りやることで身につけることができます。英語の教材ですが、Google翻訳やDeepLなどの翻訳ツールを使うことで、概ね理解することができると思います。
+        初学者を対象読者としていますが、前提としてSwiftでの基本的なプログラミングの知識や、基本的なUIKitの知識が求められます。基本的なSwiftやUIKitの知識は、Appleが提供している [iOS App Dev Tutorial](https://developer.apple.com/tutorials/app-dev-training) を一通りやることで身につけることができます。英語の教材ですが、Google翻訳やDeepLなどの翻訳ツールを使うことで、概ね理解することができると思います
         
-        また、課題5からは [iOSアプリ設計パターン入門](https://peaks.cc/books/iOS_architecture) を読んでおくことでスムーズに実装することができます。
+        また、課題5からは [iOSアプリ設計パターン入門](https://peaks.cc/books/iOS_architecture) を読んでおくことでスムーズに実装することができます
 
-        この教材の解答は全てUIKitで作成しています。現在主流になっているUIフレームワークはSwiftUIですが、SwiftUIのチュートリアルは今後増えていくと思うため、あえて作成していません。解答はありませんが、課題はSwiftUIの学習にも使うことができます。
+        この教材の解答は全てUIKitで作成しています。現在主流になっているUIフレームワークはSwiftUIですが、SwiftUIのチュートリアルは今後増えていくと思うため、あえて作成していません。解答はありませんが、課題はSwiftUIの学習にも使うことができます
+        
+        UIKitで解答を作成する場合は、プロジェクトを作成する際にiOS > Appを選び、InterfaceをStoryboardを使って初期化することをおすすめします
     }
     
     @Chapter(name: "課題1: イラストを2列で表示する仕組みを作ってみよう") {
-        作ってみましょう
+        イラストを2列で表示する仕組みを作っていきましょう。実際に画像を表示するのはこの先のSectionで扱うので、一旦2列表示の仕組みが作れればOKです
         
         @TutorialReference(tutorial: "doc:Practice1")
     }
 
     @Chapter(name: "課題2: おすすめのヘッダーを作ってみよう") {
-        作ってみましょう
+        2列表示のセクションの上にヘッダーを作って、何のコンテンツの領域かわかるようにしてみましょう
         
         @TutorialReference(tutorial: "doc:Practice2")
     }
     
     @Chapter(name: "課題3: ランキングのセクションを作ってみよう") {
-        作ってみましょう
+        課題1・2で作ったセクションの上に、ランキングを配置するセクションを作ってみましょう
         
         @TutorialReference(tutorial: "doc:Practice3")
     }
     
     @Chapter(name: "課題4: イラストの情報を取ってきて表示しよう") {
-        作ってみましょう
+        今まで作った仮のUIに実際にイラストの情報を取ってきて表示してみましょう
         
         @TutorialReference(tutorial: "doc:Practice4")
     }
     
-    @Chapter(name: "課題5: MVVMにしてみよう") {
-        作ってみましょう
+    @Chapter(name: "課題5: ViewModelをに作ってみよう") {
+        ViewModelにはUIに表示するためのプロパティを保持したり、APIを叩くなどの処理を行うためのメソッドを生やしていきます
         
         @TutorialReference(tutorial: "doc:Practice5")
     }
     
     @Chapter(name: "課題6: 通信中(ロード中)の挙動を作ってみよう") {
-        作ってみましょう
+        通信中、何も表示されてないとユーザーはアプリが壊れているのか、ネットワークが遅いのか知ることができません。APIとの通信中はくるくるを出してあげるようにしてみましょう
         
         @TutorialReference(tutorial: "doc:Practice6")
     }
     
     @Chapter(name: "課題7: 無限スクロールを実装してみよう") {
-        作ってみましょう
+        おすすめのイラストは、スクロールで下まで読み込んだら次のイラストを表示するようにしたいです
         
         @TutorialReference(tutorial: "doc:Practice7")
     }
     
     @Chapter(name: "課題8: いいねボタンを実装してみよう") {
-        作ってみましょう
+        おすすめのイラストのCellにいいねボタンを表示してみましょう。また、いいねしたことをAPIを叩いて記録しましょう
         
         @TutorialReference(tutorial: "doc:Practice8")
     }

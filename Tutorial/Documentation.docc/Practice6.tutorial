@@ -1,10 +1,15 @@
-@Tutorial(time: 50) {
+@Tutorial(time: 20) {
     @Intro(title: "課題6: 通信中(ロード中)の挙動を作ってみよう") {
+        通信中、何も表示されてないとユーザーはアプリが壊れているのか、ネットワークが遅いのか知ることができません。APIとの通信中はくるくるを出してあげるようにしてみましょう
         
+        完成イメージを示したデザインファイルは [こちら](https://www.figma.com/file/EkZe8zNKd8uTr1vehAzC74/pixiv%E3%82%A2%E3%83%97%E3%83%AA%E3%82%92%E4%BD%9C%E3%81%A3%E3%81%A6%E3%81%BF%E3%82%88%E3%81%86?node-id=8%3A109&t=LvrX1uvlmhmv5YFJ-0) です
+        
+        以下は解答になります。この教材では、まず解答を見ずにインターネット等を見て自分で書いてみることをおすすめしています。15分以上詰まったら見るという使い方をしても大丈夫です
     }
     
-    @Section(title: "課題6") {
+    @Section(title: "解答: ロード中の挙動を作る") {
         @ContentAndMedia {
+            UIActivityIndicatorを使ってロード中の挙動を作ります
         }
             
         @Steps {

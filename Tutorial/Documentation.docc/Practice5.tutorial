@@ -1,10 +1,17 @@
-@Tutorial(time: 50) {
-    @Intro(title: "課題5: MVVMにしてみよう") {
+@Tutorial(time: 60) {
+    @Intro(title: "課題5: ViewModelを作ってみよう") {
+        ViewModelにはUIに表示するためのプロパティを保持したり、APIを叩くなどの処理を行うためのメソッドを生やしていきます。そうすることでViewControllerはその値を見る(購読する)のと、処理を呼び出すだけの存在になり、シンプルなものになっていきます
         
+        ViewModelを作ることで、UIロジックに関する操作にユニットテストが書けるようになったり、ViewControllerが肥大化するのを防ぐことができます
+        
+        この課題をやる前に [iOSアプリ設計パターン入門](https://peaks.cc/books/iOS_architecture) を読んでおくことをおすすめしています
+        
+        以下は解答になります。この教材では、まず解答を見ずにインターネット等を見て自分で書いてみることをおすすめしています。15分以上詰まったら見るという使い方をしても大丈夫です
     }
     
-    @Section(title: "課題5") {
+    @Section(title: "解答: ViewModelを作る") {
         @ContentAndMedia {
+            Combineを使ってViewModelを作っていきます
         }
             
         @Steps {

@@ -1,21 +1,30 @@
-@Tutorial(time: 50) {
+@Tutorial(time: 60) {
     @Intro(title: "課題4: イラストの情報を取ってきて表示しよう") {
+        今まで作った仮のUIに実際にイラストの情報を取ってきて表示してみましょう
+        
+        イラストを取得するAPIは、チュートリアル用に用意してあるモックを利用できます。Swift Packageで [IllustAPIMock](https://github.com/pixiv/pixiv-ios-tutorial-illust-api-mock) をインストールして使うことができます
+        
+        また、取得したイラストの情報にはimageURLが含まれているので、このURLから画像を取得してUIImageViewで表示してあげる必要があります
+        
+        完成イメージを示したデザインファイルは [こちら](https://www.figma.com/file/EkZe8zNKd8uTr1vehAzC74/pixiv%E3%82%A2%E3%83%97%E3%83%AA%E3%82%92%E4%BD%9C%E3%81%A3%E3%81%A6%E3%81%BF%E3%82%88%E3%81%86?node-id=7%3A46&t=LvrX1uvlmhmv5YFJ-0) です
+        
+        以下は解答になります。この教材では、まず解答を見ずにインターネット等を見て自分で書いてみることをおすすめしています。15分以上詰まったら見るという使い方をしても大丈夫です
     }
     
-    @Section(title: "イラストの情報を取ってくる") {
+    @Section(title: "解答: イラストの情報を取ってくる") {
         @ContentAndMedia {
-            aaa
+            IllustAPIMockからイラストの情報を取ってきます
         }
             
         @Steps {
             @Step {
-                aaa
+                IllustAPIMockをSwift Packageでインストールして、初期化します
                 
                 @Code(name: "MainViewController.swift", file: Practice4_Section1_MainViewController_1.swift, previousFile: Practice3_Section2_MainViewController_1.swift)
             }
             
             @Step {
-                bbb
+                IllustAPIMockのgetRankingとgetRecommendedメソッドを呼び出して、値が取得できているかprintで確認します
                 
                 @Code(name: "MainViewController.swift", file: Practice4_Section1_MainViewController_2.swift)
             }
@@ -58,20 +67,22 @@
         }
     }
         
-    @Section(title: "Nukeで画像を表示する") {
+    @Section(title: "解答: Nukeで画像を表示する") {
         @ContentAndMedia {
-            aaa
+            IllustのimageURLから画像を取得してきます。 `Data(contentsOf:)` と `UIImage(data:)` を使ってURLから画像を表示するのもありですが、Nukeなどのライブラリを使うことでディスクキャッシュなどの便利な機能を利用することができます
         }
             
         @Steps {
             @Step {
-                aaa
+                Swift PackageでNukeをインストールし、 `loadImage(with:into:)` を使って画像を表示してあげます
+                
+                UIImageViewの `contentMode` に `.scaleAspectFill` を設定してあげることで、アスペクト比を保ちつつViewを埋めてくれるモードになります
                 
                 @Code(name: "IllustCell.swift", file: Practice4_Section1_IllustCell_2.swift, previousFile: Practice4_Section1_IllustCell_1.swift)
             }
             
             @Step {
-                aaa
+                RankingIllustCellも同様にNukeで画像を表示してあげます
                 
                 @Code(name: "RankingIllustCell.swift", file: Practice4_Section1_RankingIllustCell_2.swift, previousFile: Practice4_Section1_RankingIllustCell_1.swift)
             }

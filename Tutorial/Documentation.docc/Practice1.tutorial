@@ -1,11 +1,15 @@
-@Tutorial(time: 50) {
+@Tutorial(time: 60) {
     @Intro(title: "課題1: イラストを2列で表示する仕組みを作ってみよう") {
         イラストを2列で表示する仕組みを作っていきましょう。実際に画像を表示するのはこの先のSectionで扱うので、一旦2列表示の仕組みが作れればOKです
+        
+        完成イメージを示したデザインファイルは [こちら](https://www.figma.com/file/EkZe8zNKd8uTr1vehAzC74/pixiv%E3%82%A2%E3%83%97%E3%83%AA%E3%82%92%E4%BD%9C%E3%81%A3%E3%81%A6%E3%81%BF%E3%82%88%E3%81%86?node-id=2%3A2&t=LvrX1uvlmhmv5YFJ-0) です
+        
+        以下は解答になります。この教材では、まず解答を見ずにインターネット等を見て自分で書いてみることをおすすめしています。15分以上詰まったら見るという使い方をしても大丈夫です
     }
     
-    @Section(title: "課題1") {
+    @Section(title: "解答: 2列表示の仕組みを作る") {
         @ContentAndMedia {
-            aaaaa
+            UICollectionViewとCompositionalLayoutを使って2列表示の仕組みを作っていきます
         }
             
         @Steps {
@@ -45,7 +49,7 @@
             }
             
             @Step {
-                今回は2列表示にしたいので、それぞれのセルが画面幅の1/2になっていれば良いです。画面幅の1/2を計算して、Itemのwidthと、ItemをまとめるGroupのheightに設定してあげます。 `.absolute` を使うことで固定値を設定できます
+                今回は2列表示にしたいので、それぞれのCellが画面幅の1/2になっていれば良いです。画面幅の1/2を計算して、Itemのwidthと、ItemをまとめるGroupのheightに設定してあげます。 `.absolute` を使うことで固定値を設定できます
                 
                 @Code(name: "MainViewController.swift", file: Practice1_Section1_MainViewController_5.swift)
             }
@@ -57,7 +61,7 @@
             }
             
             @Step {
-                2列表示はできたのですが、セルの間に余白がないとわかりづらいので設定します
+                2列表示はできたのですが、Cellの間に余白がないとわかりづらいので設定します
                 
                 @Code(name: "MainViewController.swift", file: Practice1_Section1_MainViewController_7.swift)
             }
