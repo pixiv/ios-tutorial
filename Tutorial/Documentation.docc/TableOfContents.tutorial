@@ -6,9 +6,9 @@
         
         また、課題5からは [iOSアプリ設計パターン入門](https://peaks.cc/books/iOS_architecture) を読んでおくことでスムーズに実装することができます
 
-        この教材の解答は全てUIKitで作成しています。現在主流になっているUIフレームワークはSwiftUIですが、SwiftUIのチュートリアルは今後増えていくと思うため、あえて作成していません。解答はありませんが、課題はSwiftUIの学習にも使うことができます
+        この教材の解答は全てUIKitで作成しています。現在主流になっているUIフレームワークはSwiftUIですが、SwiftUIのチュートリアルは今後増えていくと思うため、あえて作成していません。解答はありませんが、課題はSwiftUIの学習にも使うことができます。UIKitで解答を作成する場合は、プロジェクトを作成する際にiOS > Appを選び、InterfaceをStoryboardを使って初期化することをおすすめします
         
-        UIKitで解答を作成する場合は、プロジェクトを作成する際にiOS > Appを選び、InterfaceをStoryboardを使って初期化することをおすすめします
+        解答を作成する前に、完成形のアプリをイメージすることが大切です。 [GitHub](https://github.com/pixiv/pixiv-ios-tutorial) からリポジトリをCloneし、Practice8をビルドして完成アプリの挙動を確認しましょう
     }
     
     @Chapter(name: "課題1: イラストを2列で表示する仕組みを作ってみよう") {
