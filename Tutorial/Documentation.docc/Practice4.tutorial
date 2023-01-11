@@ -2,7 +2,7 @@
     @Intro(title: "課題4: イラストの情報を取ってきて表示しよう") {
         今まで作った仮のUIに実際にイラストの情報を取ってきて表示してみましょう
         
-        イラストを取得するAPIは、チュートリアル用に用意してあるモックを利用できます。Swift Packageで [IllustAPIMock](https://github.com/pixiv/pixiv-ios-tutorial-illust-api-mock) をインストールして使うことができます
+        イラストを取得するAPIは、チュートリアル用に用意してあるモックを利用できます。Swift Packageで [IllustAPIMock](https://github.com/pixiv/ios-tutorial-api-mock) をインストールして使うことができます
         
         また、取得したイラストの情報にはimageURLが含まれているので、このURLから画像を取得してUIImageViewで表示してあげる必要があります
         
