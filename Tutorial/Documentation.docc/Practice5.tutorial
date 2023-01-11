@@ -30,7 +30,7 @@
             @Step {
                 Practice4で書いた、APIリクエストの処理をViewModelに持ってきます
                 
-                @Code(name: "IllustViewModel.swift", file: Practice5_Section1_IllustViewModel_2.swift)
+                @Code(name: "IllustViewModel.swift", file: Practice5_Section1_IllustViewModel_3.swift)
             }
             
             @Step {
