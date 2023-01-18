@@ -20,7 +20,7 @@ jobs:
         run: xcodebuild docbuild -scheme Tutorial -derivedDataPath ./output
 
       - name: process-archive
-        run: "`xcrun --find docc` process-archive transform-for-static-hosting ./output/Build/Products/Debug/Tutorial.doccarchive --output-path ./docs --hosting-base-path pixiv.github.io/ios-tutorial/"
+        run: "`xcrun --find docc` process-archive transform-for-static-hosting ./output/Build/Products/Debug/Tutorial.doccarchive --output-path ./docs --hosting-base-path ios-tutorial/"
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
