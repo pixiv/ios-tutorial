@@ -35,7 +35,7 @@
         @TutorialReference(tutorial: "doc:Practice4")
     }
     
-    @Chapter(name: "課題5: ViewModelをに作ってみよう") {
+    @Chapter(name: "課題5: ViewModelを作ってみよう") {
         ViewModelにはUIに表示するためのプロパティを保持したり、APIを叩くなどの処理を行うためのメソッドを生やしていきます
         
         @TutorialReference(tutorial: "doc:Practice5")
