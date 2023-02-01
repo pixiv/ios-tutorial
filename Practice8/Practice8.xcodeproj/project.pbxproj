@@ -25,6 +25,7 @@
 		244ABEC628F014B000BD1F3F /* IllustCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 244ABEB728F014B000BD1F3F /* IllustCell.xib */; };
 		244ABEC728F014B000BD1F3F /* HeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244ABEB828F014B000BD1F3F /* HeaderCell.swift */; };
 		24942E54295EE1E5004D9E20 /* IllustAPIMock in Frameworks */ = {isa = PBXBuildFile; productRef = 24942E53295EE1E5004D9E20 /* IllustAPIMock */; };
+		24AA4290298A68F00092A1C7 /* IllustAPIMock in Frameworks */ = {isa = PBXBuildFile; productRef = 24AA428F298A68F00092A1C7 /* IllustAPIMock */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,7 @@
 			files = (
 				24942E54295EE1E5004D9E20 /* IllustAPIMock in Frameworks */,
 				244ABEA828F012AD00BD1F3F /* Nuke in Frameworks */,
+				24AA4290298A68F00092A1C7 /* IllustAPIMock in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,6 +154,7 @@
 			packageProductDependencies = (
 				244ABEA728F012AD00BD1F3F /* Nuke */,
 				24942E53295EE1E5004D9E20 /* IllustAPIMock */,
+				24AA428F298A68F00092A1C7 /* IllustAPIMock */,
 			);
 			productName = Practice8;
 			productReference = 244ABE8428F0119500BD1F3F /* Practice8.app */;
@@ -183,6 +186,7 @@
 			mainGroup = 244ABE7B28F0119500BD1F3F;
 			packageReferences = (
 				244ABEA628F012AD00BD1F3F /* XCRemoteSwiftPackageReference "Nuke" */,
+				24AA428E298A68F00092A1C7 /* XCRemoteSwiftPackageReference "ios-tutorial-api-mock" */,
 			);
 			productRefGroup = 244ABE8528F0119500BD1F3F /* Products */;
 			projectDirPath = "";
@@ -449,6 +453,14 @@
 				minimumVersion = 9.0.0;
 			};
 		};
+		24AA428E298A68F00092A1C7 /* XCRemoteSwiftPackageReference "ios-tutorial-api-mock" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pixiv/ios-tutorial-api-mock";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -459,6 +471,11 @@
 		};
 		24942E53295EE1E5004D9E20 /* IllustAPIMock */ = {
 			isa = XCSwiftPackageProductDependency;
+			productName = IllustAPIMock;
+		};
+		24AA428F298A68F00092A1C7 /* IllustAPIMock */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 24AA428E298A68F00092A1C7 /* XCRemoteSwiftPackageReference "ios-tutorial-api-mock" */;
 			productName = IllustAPIMock;
 		};
 /* End XCSwiftPackageProductDependency section */
