@@ -9,51 +9,69 @@
         この教材の解答は全てUIKitで作成しています。現在主流になっているUIフレームワークはSwiftUIですが、SwiftUIのチュートリアルは今後増えていくと思うため、あえて作成していません。解答はありませんが、課題はSwiftUIの学習にも使うことができます。UIKitで解答を作成する場合は、プロジェクトを作成する際にiOS > Appを選び、InterfaceをStoryboardを使って初期化することをおすすめします
         
         解答を作成する前に、完成形のアプリをイメージすることが大切です。 [GitHub](https://github.com/pixiv/ios-tutorial) からリポジトリをCloneし、Practice8をビルドして完成アプリの挙動を確認しましょう
+        
+        @Image(source: "thumbnail_1.png")
     }
     
     @Chapter(name: "課題1: イラストを2列で表示する仕組みを作ってみよう") {
+        @Image(source: "eyecatch_1.png")
+
         イラストを2列で表示する仕組みを作っていきましょう。実際に画像を表示するのはこの先のSectionで扱うので、一旦2列表示の仕組みが作れればOKです
         
         @TutorialReference(tutorial: "doc:Practice1")
     }
 
     @Chapter(name: "課題2: おすすめのヘッダーを作ってみよう") {
+        @Image(source: "eyecatch_2.png")
+
         2列表示のセクションの上にヘッダーを作って、何のコンテンツの領域かわかるようにしてみましょう
         
         @TutorialReference(tutorial: "doc:Practice2")
     }
     
     @Chapter(name: "課題3: ランキングのセクションを作ってみよう") {
+        @Image(source: "eyecatch_3.png")
+
         課題1・2で作ったセクションの上に、ランキングを配置するセクションを作ってみましょう
         
         @TutorialReference(tutorial: "doc:Practice3")
     }
     
     @Chapter(name: "課題4: イラストの情報を取ってきて表示しよう") {
+        @Image(source: "eyecatch_4.png")
+
         今まで作った仮のUIに実際にイラストの情報を取ってきて表示してみましょう
         
         @TutorialReference(tutorial: "doc:Practice4")
     }
     
     @Chapter(name: "課題5: ViewModelを作ってみよう") {
+        @Image(source: "eyecatch_5.png")
+
         ViewModelにはUIに表示するためのプロパティを保持したり、APIを叩くなどの処理を行うためのメソッドを生やしていきます
         
         @TutorialReference(tutorial: "doc:Practice5")
     }
     
     @Chapter(name: "課題6: 通信中(ロード中)の挙動を作ってみよう") {
+        @Image(source: "eyecatch_6.png")
+
         通信中、何も表示されてないとユーザーはアプリが壊れているのか、ネットワークが遅いのか知ることができません。APIとの通信中はくるくるを出してあげるようにしてみましょう
         
         @TutorialReference(tutorial: "doc:Practice6")
     }
     
     @Chapter(name: "課題7: 無限スクロールを実装してみよう") {
+        @Image(source: "eyecatch_7.png")
+
         おすすめのイラストは、スクロールで下まで読み込んだら次のイラストを表示するようにしたいです
         
         @TutorialReference(tutorial: "doc:Practice7")
     }
     
     @Chapter(name: "課題8: いいねボタンを実装してみよう") {
+        @Image(source: "eyecatch_8.png")
+
         おすすめのイラストのCellにいいねボタンを表示してみましょう。また、いいねしたことをAPIを叩いて記録しましょう
         
         @TutorialReference(tutorial: "doc:Practice8")
