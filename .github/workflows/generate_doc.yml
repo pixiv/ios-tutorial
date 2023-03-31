@@ -23,8 +23,9 @@ jobs:
         run: "`xcrun --find docc` process-archive transform-for-static-hosting ./output/Build/Products/Debug/Tutorial.doccarchive --output-path ./docs --hosting-base-path ios-tutorial/"
 
       - name: copy index.html
-        run: cp assets/index.html docs/index.html
-        run: cp assets/index.html docs/tutorials/iindex.html
+        run: |
+          cp assets/index.html docs/index.html
+          cp assets/index.html docs/tutorials/iindex.html
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
